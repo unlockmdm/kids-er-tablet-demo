@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html><head><script>window.__resources = {"https://unpkg.com/react@18.3.1/umd/react.production.min.js": "assets/react.production.min.js", "https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js": "assets/react-dom.production.min.js"};</script>
+<meta charset="utf-8">
+<title>Kids ER Tablet Demo</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="assets/dc-runtime.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>/* devanagari */
+@font-face {
+  font-family: 'Baloo 2';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/Baloo2-devanagari.woff2") format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B0A;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Baloo 2';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/Baloo2-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Baloo 2';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/Baloo2-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Baloo 2';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/Baloo2-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* devanagari */
+@font-face {
+  font-family: 'Baloo 2';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/Baloo2-devanagari.woff2") format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B0A;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Baloo 2';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/Baloo2-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Baloo 2';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/Baloo2-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Baloo 2';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/Baloo2-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* devanagari */
+@font-face {
+  font-family: 'Baloo 2';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/Baloo2-devanagari.woff2") format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B0A;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Baloo 2';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/Baloo2-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Baloo 2';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/Baloo2-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Baloo 2';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/Baloo2-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* devanagari */
+@font-face {
+  font-family: 'Baloo 2';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/fonts/Baloo2-devanagari.woff2") format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B0A;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Baloo 2';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/fonts/Baloo2-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Baloo 2';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/fonts/Baloo2-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Baloo 2';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/fonts/Baloo2-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/Geist-cyrillic-ext.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/Geist-cyrillic.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/Geist-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/Geist-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/Geist-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/Geist-cyrillic-ext.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/Geist-cyrillic.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/Geist-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/Geist-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/Geist-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/Geist-cyrillic-ext.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/Geist-cyrillic.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/Geist-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/Geist-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/Geist-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>body{margin:0;background:#ebebea}a{color:#0a0a0a}a:hover{color:#525252}</style>
+</helmet>
+<div style="min-height:100vh;padding:24px 32px 40px;display:flex;flex-direction:column;align-items:center;gap:18px;font-family:'Geist',system-ui,sans-serif;color:#0a0a0a;box-sizing:border-box">
+  <header style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px;max-width:1068px">
+    <span sc-camel-on-click="{{ advance }}" style="background:#0a0a0a;color:#fff;border-radius:12px;padding:10px 16px;cursor:pointer;font-size:15px;font-weight:600;white-space:nowrap">Next step →</span>
+    <span sc-camel-on-click="{{ markSoonTap }}" style="background:#fff;border:1px solid #0a0a0a;border-radius:12px;padding:10px 16px;cursor:pointer;font-size:15px;font-weight:600;white-space:nowrap">Almost ready</span>
+    <span sc-camel-on-click="{{ toggleAuto }}" style="background:#fff;border:1px solid #0a0a0a;border-radius:12px;padding:10px 16px;cursor:pointer;font-size:15px;font-weight:600;white-space:nowrap">{{ autoShort }}</span>
+    <span style="width:1px;height:28px;background:#c4c4c4"></span>
+    <span sc-camel-on-click="{{ toggleMute }}" style="background:#fff;border:1px solid #d4d4d4;border-radius:12px;padding:10px 16px;cursor:pointer;font-size:15px;font-weight:600;white-space:nowrap">{{ sfxShort }}</span>
+    <span sc-camel-on-click="{{ toggleVoice }}" style="background:#fff;border:1px solid #d4d4d4;border-radius:12px;padding:10px 16px;cursor:pointer;font-size:15px;font-weight:600;white-space:nowrap">{{ voiceShort }}</span>
+    <span sc-camel-on-click="{{ reset }}" style="background:#fff;border:1px solid #d4d4d4;border-radius:12px;padding:10px 16px;cursor:pointer;font-size:15px;font-weight:600;white-space:nowrap">↺ Restart</span>
+  </header>
+
+  <div style="display:flex;justify-content:center">
+  <div sc-camel-on-click-capture="{{ tapSfx }}" style="width:1024px;height:720px;flex:none;border:22px solid #0a0a0a;border-radius:44px;background:#fff;box-shadow:0 40px 80px -30px rgba(0,0,0,.45);overflow:hidden;position:relative;font-family:'Baloo 2',cursive;box-sizing:border-box;display:flex;flex-direction:column">
+
+    <sc-if value="{{ showBar }}" hint-placeholder-val="{{ false }}">
+    <div style="flex:none;display:flex;align-items:center;gap:14px;padding:16px 22px 10px">
+      <sc-if value="{{ notHome }}" hint-placeholder-val="{{ false }}"><span sc-camel-on-click="{{ goBack }}" style="height:60px;border-radius:30px;background:#fff;border:4px solid #0a0a0a;box-shadow:0 4px 0 #0a0a0a;display:flex;align-items:center;gap:6px;cursor:pointer;flex:none;box-sizing:border-box;font-weight:800;padding:0 16px 0 12px"><span style="font-size:32px;line-height:1;margin-top:-3px">‹</span><sc-if value="{{ wordMode }}" hint-placeholder-val="{{ true }}"><span style="font-size:20px">Back</span></sc-if></span><span sc-camel-on-click="{{ goHome }}" style="height:60px;border-radius:30px;background:#fff;border:4px solid #0a0a0a;box-shadow:0 4px 0 #0a0a0a;display:flex;align-items:center;gap:6px;cursor:pointer;flex:none;box-sizing:border-box;font-weight:800;padding:0 16px 0 12px"><span style="display:block;width:26px;height:26px;background:url('{{ icHouse }}') center/contain no-repeat"></span><sc-if value="{{ wordMode }}" hint-placeholder-val="{{ true }}"><span style="font-size:20px">Home</span></sc-if></span></sc-if>
+      <span sc-camel-on-click="{{ openTalk }}" style="display:{{ barBud }};position:relative;width:66px;height:66px;border-radius:{{ buddy.shape }};background:{{ buddy.bg }};border:4px solid #0a0a0a;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;flex:none;box-sizing:border-box;transform:translateY({{ bobY }}px);transition:transform .9s ease-in-out"><sc-if value="{{ acc.show }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;left:50%;top:{{ acc.top }};width:{{ acc.w }};height:{{ acc.h }};transform:translateX(-50%) rotate({{ acc.rot }});background:{{ acc.bg }};border-radius:{{ acc.r }};clip-path:{{ acc.clip }};z-index:2"></span></sc-if>
+        <span style="display:flex;gap:12px"><span style="width:8px;height:11px;border-radius:50%;background:{{ buddy.eye }}"></span><span style="width:8px;height:11px;border-radius:50%;background:{{ buddy.eye }}"></span></span>
+        <span style="width:18px;height:{{ mouthH }}px;transition:height .15s;border:3px solid {{ buddy.eye }};border-top:none;border-radius:0 0 12px 12px;box-sizing:border-box"></span>
+      </span>
+      <div sc-camel-on-click="{{ bubbleTap }}" style="flex:1;visibility:{{ barBubVis }};position:relative;background:#f2f2f2;border-radius:26px;padding:12px 20px;font-size:23px;font-weight:700;line-height:1.2;cursor:pointer">
+        <span style="position:absolute;left:-10px;top:24px;width:0;height:0;border-top:10px solid transparent;border-bottom:10px solid transparent;border-right:12px solid #f2f2f2"></span>
+        <sc-if value="{{ picMode }}" hint-placeholder-val="{{ false }}"><span style="display:flex;align-items:center;gap:6px;height:30px"><sc-for list="{{ bars }}" as="b" hint-placeholder-count="7"><span style="width:7px;height:{{ b.h }}px;border-radius:4px;background:#0a0a0a;transition:height .3s"></span></sc-for><span style="font-family:'Geist',sans-serif;font-size:13px;font-weight:400;color:#8c8c8c;margin-left:10px">Tap to hear again</span></span></sc-if><sc-if value="{{ wordMode }}" hint-placeholder-val="{{ true }}">{{ speech }}</sc-if>
+      </div>
+      <span sc-camel-on-click="{{ toggleRead }}" style="width:58px;height:58px;border-radius:50%;border:4px solid #0a0a0a;box-shadow:0 4px 0 #0a0a0a;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:22px;flex:none;background:{{ readBg }};color:{{ readFg }};box-sizing:border-box">♪</span>
+      <span sc-camel-on-click="{{ toggleVoice }}" style="width:50px;height:50px;border-radius:50%;border:3px solid #0a0a0a;display:flex;align-items:center;justify-content:center;cursor:pointer;flex:none;box-sizing:border-box;background:{{ voiceBg }}"><span style="display:block;width:24px;height:24px;background:url('{{ voiceIcon }}') center/contain no-repeat"></span></span><span sc-camel-on-click="{{ openGrown }}" style="height:44px;border-radius:22px;border:1.5px solid #d4d4d4;display:flex;align-items:center;padding:0 14px;cursor:pointer;font-family:'Geist',sans-serif;font-size:12px;color:#8c8c8c;flex:none">Grown-ups</span>
+    </div>
+    </sc-if>
+
+<sc-if value="{{ on.hello }}" hint-placeholder-val="{{ true }}">
+<div style="flex:1;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;padding:30px;background:#f7f7f7;overflow:hidden">
+  <span style="position:absolute;left:70px;top:60px;width:150px;height:46px;border-radius:30px;background:#fff"></span>
+  <span style="position:absolute;right:110px;top:110px;width:110px;height:36px;border-radius:30px;background:#fff"></span>
+  <span style="position:absolute;left:-80px;bottom:-220px;width:560px;height:340px;border-radius:50%;background:#ececec"></span>
+  <span style="position:absolute;right:-120px;bottom:-240px;width:640px;height:360px;border-radius:50%;background:#e4e4e4"></span>
+  <span style="position:relative;font-size:60px;font-weight:800;letter-spacing:-.02em;line-height:1">Hi Mia!</span>
+  <span style="position:relative;font-size:26px;font-weight:600;color:#525252">Pick a buddy to keep you company today!</span>
+  <div style="position:relative;display:flex;gap:26px">
+    <sc-for list="{{ buddies }}" as="b" hint-placeholder-count="4">
+      <div sc-camel-on-click="{{ b.onPick }}" style="display:flex;flex-direction:column;align-items:center;gap:12px;cursor:pointer;transform:{{ b.tf }};transition:transform .25s">
+        <span style="width:140px;height:140px;border-radius:{{ b.shape }};background:{{ b.bg }};border:5px solid #0a0a0a;box-shadow:0 8px 0 #0a0a0a;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;box-sizing:border-box">
+          <span style="display:flex;gap:22px"><span style="width:14px;height:19px;border-radius:50%;background:{{ b.eye }}"></span><span style="width:14px;height:19px;border-radius:50%;background:{{ b.eye }}"></span></span>
+          <span style="width:34px;height:14px;border:4px solid {{ b.eye }};border-top:none;border-radius:0 0 20px 20px;box-sizing:border-box"></span>
+        </span>
+        <span style="font-size:26px;font-weight:800;background:{{ b.pill }};color:{{ b.pillFg }};border-radius:20px;padding:0 16px">{{ b.name }}</span>
+      </div>
+    </sc-for>
+  </div>
+  <div sc-camel-on-click="{{ start }}" style="position:relative;background:#0a0a0a;color:#fff;border-radius:44px;padding:14px 64px;font-size:32px;font-weight:800;cursor:pointer;box-shadow:0 6px 0 #525252;margin-top:6px">Let's go!</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ on.home }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;padding:4px 22px 24px;min-height:0">
+  <div style="position:relative;flex:1.9;background:#f5f5f5;border-radius:34px;overflow:hidden;display:flex;flex-direction:column;min-height:0">
+    <div style="position:relative;display:flex;justify-content:space-between;align-items:center;padding:16px 22px 0;gap:12px">
+      <span style="font-size:30px;font-weight:800;letter-spacing:-.01em">{{ journeyTitle }}</span>
+      <div style="display:flex;gap:10px;align-items:center">
+        <span sc-camel-on-click="{{ goBuddy }}" style="background:#fff;border-radius:20px;padding:2px 16px;font-size:20px;font-weight:800;cursor:pointer">★ {{ stickerCount }}</span><span sc-camel-on-click="{{ openCoach }}" style="width:40px;height:40px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:21px;font-weight:800;cursor:pointer">?</span>
+      </div>
+    </div>
+    <div style="position:relative;flex:1;margin:0 10px;background-image:url('{{ pathImg }}');background-size:100% 100%">
+      <sc-for list="{{ stones }}" as="s" hint-placeholder-count="6">
+        <div sc-camel-on-click="{{ s.onTap }}" style="position:absolute;left:{{ s.x }}%;top:{{ s.y }}%;transform:translate(-50%,-50%) translateY({{ s.fy }}px) scale({{ s.sc }});transition:transform .9s ease-in-out;display:flex;flex-direction:column;align-items:center;cursor:pointer;z-index:2">
+          <sc-if value="{{ s.now }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;bottom:100%;margin-bottom:4px;transform:translateY({{ bobY }}px);transition:transform .9s ease-in-out;"><span style="position:relative;width:56px;height:56px;border-radius:{{ buddy.shape }};background:{{ buddy.bg }};border:3px solid #0a0a0a;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;box-sizing:border-box;flex:none;"><sc-if value="{{ acc.show }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;left:50%;top:{{ acc.top }};width:{{ acc.w }};height:{{ acc.h }};transform:translateX(-50%) rotate({{ acc.rot }});background:{{ acc.bg }};border-radius:{{ acc.r }};clip-path:{{ acc.clip }};z-index:2"></span></sc-if><span style="display:flex;gap:10px"><span style="width:7px;height:9px;border-radius:50%;background:{{ buddy.eye }}"></span><span style="width:7px;height:9px;border-radius:50%;background:{{ buddy.eye }}"></span></span><span style="width:14px;height:6px;border:2.5px solid {{ buddy.eye }};border-top:none;border-radius:0 0 14px 14px;box-sizing:border-box"></span></span></span></sc-if>
+          <span style="width:{{ s.sz }}px;height:{{ s.sz }}px;border-radius:50%;background:{{ s.bg }};border:{{ s.bd }};box-shadow:{{ s.sh }};display:flex;align-items:center;justify-content:center;box-sizing:border-box;position:relative">
+            <span style="display:block;width:{{ s.isz }}px;height:{{ s.isz }}px;background:url('{{ s.icon }}') center/contain no-repeat"></span>
+            
+            
+          </span>
+          <sc-if value="{{ s.showLabel }}" hint-placeholder-val="{{ true }}"><span style="position:absolute;top:100%;left:50%;transform:translateX(-50%);margin-top:8px;background:{{ s.pill }};color:{{ s.pillFg }};border-radius:16px;padding:0 12px;font-size:{{ labelSize }}px;font-weight:800;white-space:nowrap;display:flex;align-items:center;gap:8px"><sc-if value="{{ s.dots }}" hint-placeholder-val="{{ false }}"><span style="display:flex;gap:4px;align-items:center"><sc-for list="{{ dots }}" as="d" hint-placeholder-count="3"><span style="width:7px;height:7px;border-radius:50%;background:#fff;transform:translateY({{ d.y }}px);transition:transform .3s"></span></sc-for></span></sc-if>{{ s.label }}</span></sc-if>
+          
+        </div>
+      </sc-for>
+    </div>
+  </div>
+  <sc-if value="{{ wordMode }}" hint-placeholder-val="{{ true }}"><div style="flex:none;height:116px;display:grid;grid-template-columns:repeat(5,1fr);gap:12px">
+    <div sc-camel-on-click="{{ openTalk }}" style="background:#fff;border:4px solid #0a0a0a;border-radius:28px;padding:0 12px;display:flex;align-items:center;gap:10px;cursor:pointer;box-sizing:border-box;box-shadow:0 5px 0 #0a0a0a"><span style="width:46px;height:46px;border-radius:{{ buddy.shape }};background:{{ buddy.bg }};border:3px solid #0a0a0a;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;box-sizing:border-box;flex:none"><span style="display:flex;gap:9px"><span style="width:7px;height:9px;border-radius:50%;background:{{ buddy.eye }}"></span><span style="width:7px;height:9px;border-radius:50%;background:{{ buddy.eye }}"></span></span><span style="width:18px;height:8px;border:2.5px solid {{ buddy.eye }};border-top:none;border-radius:0 0 20px 20px;box-sizing:border-box"></span></span><span style="font-size:21px;font-weight:800;line-height:1.05">Talk to {{ buddyName }}</span></div>
+    <sc-for list="{{ homeTiles2 }}" as="t" hint-placeholder-count="3"><div sc-camel-on-click="{{ t.onTap }}" style="background:#fff;border:4px solid #0a0a0a;border-radius:28px;padding:0 12px;display:flex;align-items:center;gap:10px;cursor:pointer;box-sizing:border-box;box-shadow:0 5px 0 #0a0a0a"><span style="display:block;width:42px;height:42px;flex:none;background:url('{{ t.art2 }}') center/contain no-repeat"></span><span style="font-size:21px;font-weight:800;line-height:1.05">{{ t.title }}</span></div></sc-for>
+    <div sc-camel-on-click="{{ goTell }}" style="background:#fff;border:4px solid #0a0a0a;border-radius:28px;padding:0 12px;display:flex;align-items:center;gap:10px;cursor:pointer;box-sizing:border-box;box-shadow:0 5px 0 #0a0a0a"><span style="display:block;width:42px;height:42px;flex:none;background:url('{{ icTell }}') center/contain no-repeat"></span><span style="font-size:21px;font-weight:800;line-height:1.05">Tell my grown-up</span></div>
+  </div></sc-if><sc-if value="{{ picMode }}" hint-placeholder-val="{{ false }}"><div style="flex:1;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;min-height:0">
+    <div sc-camel-on-click="{{ goFeel }}" style="position:relative;background:#fff;border:5px solid #0a0a0a;border-radius:30px;display:flex;align-items:center;justify-content:center;cursor:pointer;box-sizing:border-box;box-shadow:0 7px 0 #0a0a0a">
+      <span style="transform:translateY({{ bobY }}px);transition:transform .9s ease-in-out"><span style="width:88px;height:88px;border-radius:{{ buddy.shape }};background:{{ buddy.bg }};border:4px solid #0a0a0a;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;box-sizing:border-box"><span style="display:flex;gap:16px"><span style="width:10px;height:13px;border-radius:50%;background:{{ buddy.eye }}"></span><span style="width:10px;height:13px;border-radius:50%;background:{{ buddy.eye }}"></span></span><span style="width:26px;height:11px;border:3.5px solid {{ buddy.eye }};border-top:none;border-radius:0 0 20px 20px;box-sizing:border-box"></span></span></span>
+      <span sc-camel-on-click="{{ hearFeel }}" style="position:absolute;right:10px;top:10px;width:40px;height:40px;border-radius:50%;background:#fff;border:3px solid #0a0a0a;display:flex;align-items:center;justify-content:center;box-sizing:border-box"><span style="display:block;width:20px;height:20px;background:url('{{ icSpeak }}') center/contain no-repeat"></span></span>
+    </div>
+    <sc-for list="{{ picTiles }}" as="t" hint-placeholder-count="4">
+      <div sc-camel-on-click="{{ t.onTap }}" style="position:relative;background:{{ t.bg }};border:5px solid #0a0a0a;border-radius:30px;display:flex;align-items:center;justify-content:center;cursor:pointer;box-sizing:border-box;box-shadow:0 7px 0 {{ t.sh }}">
+        <span style="display:block;width:84px;height:84px;background:url('{{ t.art }}') center/contain no-repeat"></span>
+        <span sc-camel-on-click="{{ t.onHear }}" style="position:absolute;right:10px;top:10px;width:40px;height:40px;border-radius:50%;background:#fff;border:3px solid #0a0a0a;display:flex;align-items:center;justify-content:center;box-sizing:border-box"><span style="display:block;width:20px;height:20px;background:url('{{ icSpeak }}') center/contain no-repeat"></span></span>
+      </div>
+    </sc-for>
+  </div></sc-if>
+</div>
+</sc-if>
+
+<sc-if value="{{ on.stone }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;display:grid;grid-template-columns:1fr 1.25fr;gap:26px;padding:4px 22px 22px;min-height:0">
+  <div style="position:relative;background:#f5f5f5;border-radius:34px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;overflow:hidden">
+    <span style="position:absolute;left:-60px;bottom:-140px;width:420px;height:240px;border-radius:50%;background:#ececec"></span>
+    <span style="position:relative;width:180px;height:180px;border-radius:50%;background:#fff;border:6px solid #0a0a0a;box-shadow:0 10px 0 #0a0a0a;display:flex;align-items:center;justify-content:center;box-sizing:border-box"><span style="display:block;width:88px;height:88px;background:url('{{ stone.icon }}') center/contain no-repeat"></span></span>
+    <span style="position:relative;font-family:'Geist',sans-serif;font-size:12px;color:#8c8c8c">[ friendly illustration with child life ]</span>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:16px;padding:6px 0">
+    <span style="align-self:flex-start;background:#0a0a0a;color:#fff;border-radius:20px;padding:2px 16px;font-size:19px;font-weight:700">{{ stone.tag }}</span>
+    <span style="font-size:54px;font-weight:800;line-height:.95;letter-spacing:-.01em">{{ stone.label }}</span>
+    <span style="font-size:27px;font-weight:600;line-height:1.25">{{ stone.line }}</span>
+    <div style="margin-top:auto;position:relative;background:#f2f2f2;border-radius:26px;padding:16px 20px 16px 76px;font-size:23px;font-weight:700;line-height:1.2">
+      <span style="position:absolute;left:16px;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:{{ buddy.shape }};background:{{ buddy.bg }};border:3px solid #0a0a0a;box-sizing:border-box;display:flex;align-items:center;justify-content:center;gap:7px"><span style="width:6px;height:8px;border-radius:50%;background:{{ buddy.eye }}"></span><span style="width:6px;height:8px;border-radius:50%;background:{{ buddy.eye }}"></span></span>
+      {{ stone.ask }}
+    </div>
+    <div sc-camel-on-click="{{ goHome }}" style="align-self:flex-start;background:#0a0a0a;color:#fff;border-radius:40px;padding:12px 38px;font-size:24px;font-weight:800;cursor:pointer;box-shadow:0 5px 0 #525252">Back to my journey</div>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ on.talk }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;display:grid;grid-template-columns:280px 1fr;gap:18px;padding:4px 22px 22px;min-height:0">
+  <div style="background:#f5f5f5;border-radius:34px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:20px;position:relative;overflow:hidden">
+    <span style="position:absolute;left:-60px;bottom:-150px;width:400px;height:240px;border-radius:50%;background:#ebebeb"></span>
+    <span style="position:relative;width:170px;height:170px;border-radius:{{ buddy.shape }};background:{{ buddy.bg }};border:6px solid #0a0a0a;box-shadow:0 9px 0 #0a0a0a;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;box-sizing:border-box;transform:translateY({{ bobY }}px);transition:transform .9s ease-in-out"><sc-if value="{{ acc.show }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;left:50%;top:{{ acc.top }};width:{{ acc.w }};height:{{ acc.h }};transform:translateX(-50%) rotate({{ acc.rot }});background:{{ acc.bg }};border-radius:{{ acc.r }};clip-path:{{ acc.clip }};z-index:2"></span></sc-if>
+      <span style="display:flex;gap:28px"><span style="width:16px;height:22px;border-radius:50%;background:{{ buddy.eye }}"></span><span style="width:16px;height:22px;border-radius:50%;background:{{ buddy.eye }}"></span></span>
+      <sc-if value="{{ mouthSmile }}" hint-placeholder-val="{{ true }}"><span style="width:42px;height:17px;border:5px solid {{ buddy.eye }};border-top:none;border-radius:0 0 24px 24px;box-sizing:border-box"></span></sc-if>
+      <sc-if value="{{ mouthListening }}" hint-placeholder-val="{{ false }}"><span style="width:20px;height:20px;border:5px solid {{ buddy.eye }};border-radius:50%;box-sizing:border-box"></span></sc-if>
+    </span>
+    <span style="position:relative;font-size:30px;font-weight:800;margin-top:6px">{{ buddyName }}</span>
+    <div sc-camel-on-click="{{ micTap }}" style="position:relative;width:92px;height:92px;border-radius:50%;background:{{ micBg }};border:5px solid #0a0a0a;box-shadow:0 6px 0 #0a0a0a;display:flex;align-items:center;justify-content:center;cursor:pointer;box-sizing:border-box"><span style="display:block;width:38px;height:38px;background:url('{{ micIcon }}') center/contain no-repeat"></span></div>
+    <span style="position:relative;font-size:19px;font-weight:700;color:#525252">{{ micLabel }}</span>
+    <span sc-camel-on-click="{{ restartTalk }}" style="position:relative;font-family:'Geist',sans-serif;font-size:12px;color:#8c8c8c;cursor:pointer;text-decoration:underline">Start over</span>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:12px;min-height:0">
+    <div ref="{{ threadRef }}" data-thread="1" style="flex:1;overflow-y:auto;scroll-behavior:smooth;display:flex;flex-direction:column;gap:10px;padding:4px 6px 4px 0">
+      <sc-for list="{{ thread }}" as="m" hint-placeholder-count="2">
+        <sc-if value="{{ m.isPip }}" hint-placeholder-val="{{ true }}"><div style="align-self:flex-start;max-width:82%;background:#f2f2f2;border-radius:26px 26px 26px 8px;padding:12px 20px;font-size:24px;font-weight:700;line-height:1.2">{{ m.text }}</div></sc-if>
+        <sc-if value="{{ m.isKid }}" hint-placeholder-val="{{ false }}"><div style="align-self:flex-end;max-width:70%;background:#0a0a0a;color:#fff;border-radius:26px 26px 8px 26px;padding:10px 20px;font-size:23px;font-weight:700">{{ m.text }}</div></sc-if>
+        <sc-if value="{{ m.isSys }}" hint-placeholder-val="{{ false }}"><div style="align-self:center;border:1.5px dashed #a3a3a3;border-radius:20px;padding:4px 14px;font-family:'Geist',sans-serif;font-size:13px;color:#525252">✓ {{ m.text }}</div></sc-if>
+        <sc-if value="{{ m.isCard }}" hint-placeholder-val="{{ false }}"><div style="align-self:flex-start;width:380px;background:#fff;border:5px solid #0a0a0a;border-radius:28px;box-shadow:0 6px 0 #0a0a0a;padding:16px 20px;display:flex;flex-direction:column;gap:8px;transform:rotate(-1deg)"><span style="font-size:27px;font-weight:800">{{ planTitle }}</span><sc-for list="{{ planChosen }}" as="p" hint-placeholder-count="2"><div style="display:flex;gap:10px;align-items:center;font-size:21px;font-weight:700"><span style="width:26px;height:26px;border-radius:50%;background:#0a0a0a;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;flex:none">★</span>{{ p }}</div></sc-for><span style="font-family:'Geist',sans-serif;font-size:12px;color:#737373;margin-top:4px">Show this to your nurse before the poke.</span></div></sc-if>
+      </sc-for>
+      <sc-if value="{{ typing }}" hint-placeholder-val="{{ false }}"><div style="align-self:flex-start;background:#f2f2f2;border-radius:26px;padding:16px 20px;display:flex;gap:7px"><span style="width:10px;height:10px;border-radius:50%;background:#8c8c8c"></span><span style="width:10px;height:10px;border-radius:50%;background:#a3a3a3"></span><span style="width:10px;height:10px;border-radius:50%;background:#c4c4c4"></span></div></sc-if>
+    </div>
+    <sc-if value="{{ showOpts }}" hint-placeholder-val="{{ false }}"><div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end;padding-bottom:6px"><sc-for list="{{ opts }}" as="o" hint-placeholder-count="3"><span sc-camel-on-click="{{ o.onTap }}" style="background:#fff;border:4px solid #0a0a0a;box-shadow:0 5px 0 #0a0a0a;border-radius:30px;padding:7px 22px;font-size:22px;font-weight:800;cursor:pointer">{{ o.label }}</span></sc-for></div></sc-if>
+    <sc-if value="{{ showPlan }}" hint-placeholder-val="{{ false }}">
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px"><sc-for list="{{ planOpts }}" as="p" hint-placeholder-count="8"><div sc-camel-on-click="{{ p.onTap }}" style="border:4px solid #0a0a0a;border-radius:22px;padding:8px;min-height:72px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:19px;font-weight:800;line-height:1.1;cursor:pointer;background:{{ p.bg }};color:{{ p.fg }};box-shadow:0 5px 0 #0a0a0a;box-sizing:border-box">{{ p.label }}</div></sc-for></div>
+      <div style="display:flex;justify-content:flex-end;padding:4px 0 6px"><span sc-camel-on-click="{{ planDone }}" style="background:#0a0a0a;color:#fff;border-radius:30px;padding:9px 34px;font-size:22px;font-weight:800;cursor:pointer;opacity:{{ planOp }}">That's my plan!</span></div>
+    </sc-if>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ on.buddy }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;display:grid;grid-template-columns:1fr 1.25fr;gap:24px;padding:4px 22px 24px;min-height:0">
+  <div style="background:#f5f5f5;border-radius:34px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;position:relative;overflow:hidden">
+    <span style="position:absolute;left:-60px;bottom:-160px;width:420px;height:250px;border-radius:50%;background:#ececec"></span><span style="position:absolute;right:-90px;bottom:-180px;width:480px;height:270px;border-radius:50%;background:#e6e6e6"></span>
+    <span style="position:relative;transform:translateY({{ bobY }}px);transition:transform .9s ease-in-out;"><span style="position:relative;width:190px;height:190px;border-radius:{{ buddy.shape }};background:{{ buddy.bg }};border:6px solid #0a0a0a;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:15px;box-sizing:border-box;flex:none;box-shadow:0 10px 0 #0a0a0a;"><sc-if value="{{ acc.show }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;left:50%;top:{{ acc.top }};width:{{ acc.w }};height:{{ acc.h }};transform:translateX(-50%) rotate({{ acc.rot }});background:{{ acc.bg }};border-radius:{{ acc.r }};clip-path:{{ acc.clip }};z-index:2"></span></sc-if><span style="display:flex;gap:30px"><span style="width:18px;height:24px;border-radius:50%;background:{{ buddy.eye }}"></span><span style="width:18px;height:24px;border-radius:50%;background:{{ buddy.eye }}"></span></span><span style="width:46px;height:19px;border:5px solid {{ buddy.eye }};border-top:none;border-radius:0 0 46px 46px;box-sizing:border-box"></span></span></span>
+    <span style="position:relative;font-size:34px;font-weight:800">{{ buddyName }}</span>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:14px;padding:6px 0">
+    <span style="font-size:44px;font-weight:800;line-height:1">Dress up {{ buddyName }}</span>
+    <span style="font-size:21px;font-weight:600;color:#525252">Every brave sticker unlocks something new. You have {{ stickerWord }}.</span>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:6px">
+      <sc-for list="{{ accOpts }}" as="o" hint-placeholder-count="5"><div sc-camel-on-click="{{ o.onTap }}" style="border:4px solid #0a0a0a;border-radius:24px;padding:12px 18px;background:{{ o.bg }};color:{{ o.fg }};opacity:{{ o.op }};cursor:pointer;box-shadow:0 5px 0 #0a0a0a;display:flex;flex-direction:column;box-sizing:border-box"><span style="font-size:26px;font-weight:800;line-height:1.1">{{ o.label }}</span><span style="font-size:15px;font-weight:600;opacity:.7">{{ o.sub }}</span></div></sc-for>
+    </div>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ on.ready }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;display:grid;grid-template-columns:repeat({{ readyCols }},1fr);gap:22px;padding:8px 26px 30px;min-height:0">
+  <sc-for list="{{ readyTiles }}" as="g" hint-placeholder-count="3">
+    <div sc-camel-on-click="{{ g.onTap }}" style="position:relative;background:{{ g.bg }};color:{{ g.fg }};border:5px solid #0a0a0a;border-radius:34px;padding:24px;display:flex;flex-direction:column;justify-content:flex-end;gap:4px;cursor:pointer;box-sizing:border-box;overflow:hidden;transform:rotate({{ g.rot }}deg);box-shadow:0 7px 0 #0a0a0a">
+      <span style="position:absolute;left:50%;top:38%;transform:translate(-50%,-50%);display:block;width:140px;height:140px;background:url('{{ g.art }}') center/contain no-repeat"></span>
+      <span style="font-size:40px;font-weight:800;line-height:1">{{ g.title }}</span>
+      <span style="font-size:19px;font-weight:600;opacity:.65;line-height:1.2">{{ g.sub }}</span>
+    </div>
+  </sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{ on.doctor }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;padding:4px 22px 26px;min-height:0">
+  <div style="flex:1;position:relative;background:#f5f5f5;border-radius:34px;display:flex;align-items:center;justify-content:center;gap:44px;overflow:hidden;min-height:0">
+    <span style="position:absolute;left:-60px;bottom:-160px;width:420px;height:250px;border-radius:50%;background:#ececec"></span><span style="position:absolute;right:-90px;bottom:-180px;width:480px;height:270px;border-radius:50%;background:#e6e6e6"></span>
+    <div style="position:relative">
+      <span style="display:block;transform:translateY({{ bobY }}px);transition:transform .9s ease-in-out;"><span style="position:relative;width:200px;height:200px;border-radius:{{ buddy.shape }};background:{{ buddy.bg }};border:6px solid #0a0a0a;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:15px;box-sizing:border-box;flex:none;box-shadow:0 10px 0 #0a0a0a;"><sc-if value="{{ acc.show }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;left:50%;top:{{ acc.top }};width:{{ acc.w }};height:{{ acc.h }};transform:translateX(-50%) rotate({{ acc.rot }});background:{{ acc.bg }};border-radius:{{ acc.r }};clip-path:{{ acc.clip }};z-index:2"></span></sc-if><span style="display:flex;gap:32px"><span style="width:18px;height:24px;border-radius:50%;background:{{ buddy.eye }}"></span><span style="width:18px;height:24px;border-radius:50%;background:{{ buddy.eye }}"></span></span><span style="width:48px;height:20px;border:5px solid {{ buddy.eye }};border-top:none;border-radius:0 0 48px 48px;box-sizing:border-box"></span></span></span>
+      <sc-if value="{{ docBandage }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;right:-14px;top:58%;width:74px;height:28px;border-radius:14px;background:#fff;border:4px solid #0a0a0a;transform:rotate(-24deg);box-sizing:border-box;z-index:3"></span></sc-if>
+      <sc-if value="{{ docHasTool }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;left:-70px;top:10px;width:84px;height:84px;border-radius:50%;background:#fff;border:4px solid #0a0a0a;display:flex;align-items:center;justify-content:center;box-sizing:border-box;z-index:3"><span style="display:block;width:48px;height:48px;background:url('{{ docToolIcon }}') center/contain no-repeat"></span></span></sc-if>
+    </div>
+    <div style="position:relative;max-width:380px;display:flex;flex-direction:column;gap:14px">
+      <div style="background:#fff;border-radius:30px 30px 30px 8px;padding:16px 22px;font-size:29px;font-weight:800;line-height:1.2">{{ docLine }}</div>
+      <sc-if value="{{ docAll }}" hint-placeholder-val="{{ false }}"><span style="align-self:flex-start;background:#0a0a0a;color:#fff;border-radius:20px;padding:4px 16px;font-size:20px;font-weight:700">All 4 tools! You're a great doctor.</span></sc-if>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px">
+    <sc-for list="{{ tools }}" as="t" hint-placeholder-count="4"><div sc-camel-on-click="{{ t.onTap }}" style="position:relative;background:{{ t.bg }};color:{{ t.fg }};border:4px solid #0a0a0a;border-radius:24px;padding:12px 14px;display:flex;align-items:center;gap:12px;cursor:pointer;box-shadow:0 5px 0 #0a0a0a;box-sizing:border-box"><span style="display:block;width:44px;height:44px;flex:none;background:url('{{ t.icon }}') center/contain no-repeat"></span><span style="font-size:21px;font-weight:800;line-height:1.05">{{ t.label }}</span><sc-if value="{{ t.done }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;right:10px;top:6px;font-size:16px;font-weight:800">✓</span></sc-if></div></sc-for>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ on.story }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;display:grid;grid-template-columns:1fr 1fr;gap:26px;padding:4px 22px 26px;min-height:0">
+  <div style="background:#f5f5f5;border-radius:34px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:24px">
+    <span style="position:absolute;left:-60px;bottom:-160px;width:420px;height:250px;border-radius:50%;background:#ececec"></span><span style="position:absolute;right:-90px;bottom:-180px;width:480px;height:270px;border-radius:50%;background:#e6e6e6"></span>
+    <span style="position:relative;transform:translateY({{ bobY }}px);transition:transform .9s ease-in-out;"><span style="position:relative;width:150px;height:150px;border-radius:{{ buddy.shape }};background:{{ buddy.bg }};border:5px solid #0a0a0a;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;box-sizing:border-box;flex:none;box-shadow:0 8px 0 #0a0a0a;"><sc-if value="{{ acc.show }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;left:50%;top:{{ acc.top }};width:{{ acc.w }};height:{{ acc.h }};transform:translateX(-50%) rotate({{ acc.rot }});background:{{ acc.bg }};border-radius:{{ acc.r }};clip-path:{{ acc.clip }};z-index:2"></span></sc-if><span style="display:flex;gap:24px"><span style="width:14px;height:19px;border-radius:50%;background:{{ buddy.eye }}"></span><span style="width:14px;height:19px;border-radius:50%;background:{{ buddy.eye }}"></span></span><span style="width:36px;height:15px;border:4px solid {{ buddy.eye }};border-top:none;border-radius:0 0 36px 36px;box-sizing:border-box"></span></span></span>
+    <span style="position:relative;width:116px;height:116px;border-radius:50%;background:#fff;border:5px solid #0a0a0a;display:flex;align-items:center;justify-content:center;box-sizing:border-box"><span style="display:block;width:58px;height:58px;background:url('{{ story.icon }}') center/contain no-repeat"></span></span>
+    <span style="position:absolute;left:18px;bottom:14px;font-family:'Geist',sans-serif;font-size:11px;color:#8c8c8c">[ illustration ]</span>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:18px;padding:8px 0">
+    <span style="font-size:20px;font-weight:700;color:#737373">{{ story.title }}</span>
+    <span style="font-size:38px;font-weight:800;line-height:1.2">{{ story.text }}</span>
+    <div style="margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px">
+      <span sc-camel-on-click="{{ story.onPrev }}" style="width:68px;height:68px;border-radius:50%;border:5px solid #0a0a0a;display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:800;cursor:pointer;opacity:{{ story.prevOp }};box-sizing:border-box">‹</span>
+      <div style="display:flex;gap:8px"><sc-for list="{{ story.dots }}" as="d" hint-placeholder-count="5"><span style="width:{{ d.w }}px;height:12px;border-radius:6px;background:{{ d.bg }};transition:width .25s"></span></sc-for></div>
+      <span sc-camel-on-click="{{ story.onNext }}" style="height:68px;border-radius:34px;background:#0a0a0a;color:#fff;padding:0 30px;display:flex;align-items:center;font-size:26px;font-weight:800;cursor:pointer;box-shadow:0 5px 0 #525252">{{ story.nextLabel }}</span>
+    </div>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ on.myplan }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;display:flex;align-items:center;justify-content:center;gap:40px;padding:10px 30px 30px">
+  <div style="width:440px;background:#fff;border:6px solid #0a0a0a;border-radius:32px;box-shadow:0 8px 0 #0a0a0a;padding:22px 26px;display:flex;flex-direction:column;gap:10px;transform:rotate(-1.5deg)">
+    <span style="font-size:32px;font-weight:800">{{ planTitle }}</span>
+    <sc-for list="{{ planChosen }}" as="p" hint-placeholder-count="3"><div style="display:flex;gap:12px;align-items:center;font-size:24px;font-weight:700"><span style="width:30px;height:30px;border-radius:50%;background:#0a0a0a;color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;flex:none">★</span>{{ p }}</div></sc-for>
+    <span style="font-family:'Geist',sans-serif;font-size:13px;color:#737373;margin-top:6px">Show this to your nurse before the poke.</span>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start">
+    <span style="font-size:30px;font-weight:800;max-width:300px;line-height:1.15">Your plan is saved, and your grown-up has it too.</span>
+    <div sc-camel-on-click="{{ makePlan }}" style="background:#fff;border:4px solid #0a0a0a;border-radius:30px;padding:8px 24px;font-size:22px;font-weight:800;cursor:pointer;box-shadow:0 5px 0 #0a0a0a">Change it with {{ buddyName }}</div>
+    <div sc-camel-on-click="{{ practiceCandles }}" style="background:#0a0a0a;color:#fff;border-radius:30px;padding:10px 26px;font-size:22px;font-weight:800;cursor:pointer">Practice breathing</div>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ on.play }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;display:grid;grid-template-columns:repeat(2,1fr);grid-template-rows:1fr 1fr;gap:22px;padding:8px 26px 30px;min-height:0">
+  <sc-for list="{{ games }}" as="g" hint-placeholder-count="4">
+    <div sc-camel-on-click="{{ g.onTap }}" style="position:relative;background:{{ g.bg }};color:{{ g.fg }};border:5px solid #0a0a0a;border-radius:34px;padding:22px 26px;display:flex;align-items:flex-end;justify-content:space-between;cursor:pointer;box-sizing:border-box;overflow:hidden;transform:rotate({{ g.rot }}deg);box-shadow:0 7px 0 #0a0a0a">
+      <span style="display:block;position:absolute;right:20px;top:16px;width:110px;height:110px;background:url('{{ g.art }}') center/contain no-repeat"></span>
+      <div style="display:flex;flex-direction:column"><span style="font-size:40px;font-weight:800;line-height:1">{{ g.title }}</span><span style="font-size:19px;font-weight:600;opacity:.65">{{ g.sub }}</span></div>
+      <span style="width:56px;height:56px;border-radius:50%;background:{{ g.fg }};color:{{ g.bg }};display:flex;align-items:center;justify-content:center;font-size:22px;flex:none">▶</span>
+    </div>
+  </sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{ on.memory }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:14px;padding:2px 24px 24px">
+  <div style="display:flex;gap:20px;align-items:center"><span style="font-size:32px;font-weight:800">Find the pairs</span><span style="background:#f2f2f2;border-radius:20px;padding:2px 14px;font-size:19px;font-weight:700">{{ pairsFound }} of 4 found</span></div>
+  <div style="display:grid;grid-template-columns:repeat(4,128px);gap:18px">
+    <sc-for list="{{ cards }}" as="c" hint-placeholder-count="8"><div sc-camel-on-click="{{ c.onTap }}" style="width:128px;height:156px;border-radius:24px;background:{{ c.bg }};background-image:{{ c.pat }};background-size:18px 18px;border:5px solid #0a0a0a;box-shadow:0 6px 0 #0a0a0a;display:flex;align-items:center;justify-content:center;font-size:64px;color:#0a0a0a;cursor:pointer;box-sizing:border-box;opacity:{{ c.op }};transform:{{ c.tf }};transition:transform .25s,background-color .2s">{{ c.face }}</div></sc-for>
+  </div>
+  
+</div>
+</sc-if>
+
+<sc-if value="{{ on.ispy }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;padding:20px;overflow:hidden">
+  <span style="position:absolute;width:520px;height:520px;border-radius:50%;border:4px dashed #e0e0e0"></span>
+  <span style="position:absolute;top:20px;right:24px;background:#0a0a0a;color:#fff;border-radius:20px;padding:2px 14px;font-size:18px;font-weight:700">{{ spyCount }}</span><span style="position:relative;font-size:30px;font-weight:700;color:#737373">I spy with my little eye…</span>
+  <span style="position:relative;font-size:70px;font-weight:800;line-height:1;text-align:center">{{ spyText }}</span>
+  <span style="position:relative;font-size:23px;font-weight:600">Look around the room. Point when you find it!</span>
+  <div sc-camel-on-click="{{ nextSpy }}" style="position:relative;background:#0a0a0a;color:#fff;border-radius:44px;padding:14px 52px;font-size:28px;font-weight:800;cursor:pointer;box-shadow:0 6px 0 #525252">Found it! Next one</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ on.draw }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;display:flex;gap:16px;padding:2px 22px 22px;min-height:0">
+  <div style="flex:1;border:5px solid #0a0a0a;border-radius:30px;overflow:hidden;background:#fff;box-shadow:0 6px 0 #0a0a0a">
+    <canvas ref="{{ canvasRef }}" width="820" height="520" sc-camel-on-pointer-down="{{ pDown }}" sc-camel-on-pointer-move="{{ pMove }}" sc-camel-on-pointer-up="{{ pUp }}" sc-camel-on-pointer-leave="{{ pUp }}" style="width:100%;height:100%;display:block;touch-action:none;cursor:crosshair"></canvas>
+  </div>
+  <div style="width:96px;display:flex;flex-direction:column;gap:14px;align-items:center">
+    <sc-for list="{{ brushes }}" as="b" hint-placeholder-count="3"><span sc-camel-on-click="{{ b.onPick }}" style="width:76px;height:76px;border-radius:50%;border:4px solid #0a0a0a;background:{{ b.bg }};display:flex;align-items:center;justify-content:center;cursor:pointer;box-sizing:border-box"><span style="width:{{ b.dot }}px;height:{{ b.dot }}px;border-radius:50%;background:{{ b.dc }};border:{{ b.dbd }}"></span></span></sc-for>
+    <span sc-camel-on-click="{{ clearCanvas }}" style="margin-top:auto;width:76px;height:76px;border-radius:50%;background:#f2f2f2;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;font-weight:800">Clear</span>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ on.count }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;padding:0 22px 22px;min-height:0">
+  <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:32px;font-weight:800">Light up the stars</span><span style="background:#0a0a0a;color:#fff;border-radius:24px;padding:0 18px;font-size:24px;font-weight:800">{{ starWord }}</span></div>
+  <div style="flex:1;position:relative;background-color:#0a0a0a;background-image:url('{{ constImg }}');background-size:100% 100%;border-radius:32px;overflow:hidden;min-height:0">
+    <sc-for list="{{ skyDots }}" as="d" hint-placeholder-count="0"><span style="position:absolute;left:{{ d.x }}%;top:{{ d.y }}%;width:{{ d.s }}px;height:{{ d.s }}px;border-radius:50%;background:#444"></span></sc-for>
+    <sc-for list="{{ stars2 }}" as="t" hint-placeholder-count="9"><span sc-camel-on-click="{{ t.onTap }}" style="position:absolute;left:{{ t.x }}%;top:{{ t.y }}%;font-size:{{ t.s }}px;line-height:1;cursor:pointer;color:{{ t.c }};text-shadow:{{ t.glow }};transform:translate(-50%,-50%) rotate({{ t.r }}deg) scale({{ t.sc }});transition:transform .25s,color .2s,text-shadow .3s">★</span></sc-for>
+    
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ on.calm }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:22px;padding:8px 26px 30px;min-height:0">
+  <sc-for list="{{ calms }}" as="g" hint-placeholder-count="3">
+    <div sc-camel-on-click="{{ g.onTap }}" style="position:relative;background:{{ g.bg }};color:{{ g.fg }};border:5px solid #0a0a0a;border-radius:34px;padding:24px;display:flex;flex-direction:column;justify-content:flex-end;gap:4px;cursor:pointer;box-sizing:border-box;overflow:hidden;transform:rotate({{ g.rot }}deg);box-shadow:0 7px 0 #0a0a0a">
+      <span style="display:block;position:absolute;left:50%;top:38%;transform:translate(-50%,-50%);width:88px;height:88px;background:url('{{ g.art }}') center/contain no-repeat"></span>
+      <span style="font-size:32px;font-weight:800;line-height:1">{{ g.title }}</span>
+      <span style="font-size:19px;font-weight:600;opacity:.65;line-height:1.2">{{ g.sub }}</span>
+    </div>
+  </sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{ on.candles }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:8px;padding:0 24px 22px">
+  <div style="display:flex;gap:34px;align-items:flex-end">
+    <sc-for list="{{ candles2 }}" as="c" hint-placeholder-count="5"><div style="display:flex;flex-direction:column;align-items:center;gap:4px"><span style="width:30px;height:44px;border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;background:{{ c.flame }};border:4px solid {{ c.fbd }};box-sizing:border-box;transform:rotate({{ c.rot }}deg) scale({{ c.sc }});transform-origin:50% 100%;transition:transform .35s"></span><span style="width:40px;height:100px;border:5px solid #0a0a0a;border-radius:10px;background:#fff;box-sizing:border-box;background-image:repeating-linear-gradient(-45deg,#fff 0 8px,#ededed 8px 16px)"></span></div></sc-for>
+  </div>
+  <div style="height:196px;display:flex;align-items:center;justify-content:center"><div style="width:{{ br.size }}px;height:{{ br.size }}px;border-radius:50%;background:{{ br.bg }};border:5px solid #0a0a0a;transition:{{ br.tr }};display:flex;align-items:center;justify-content:center;font-size:46px;font-weight:800;color:{{ br.fg }};box-sizing:border-box">{{ br.count }}</div></div>
+  <span style="font-size:36px;font-weight:800;line-height:1">{{ br.text }}</span>
+  <span style="font-size:20px;font-weight:600;color:#737373">{{ br.sub }}</span>
+  <div sc-camel-on-click="{{ br.onBtn }}" style="margin-top:4px;background:{{ br.btnBg }};color:{{ br.btnFg }};border:4px solid #0a0a0a;border-radius:44px;padding:6px 48px;font-size:26px;font-weight:800;cursor:pointer;box-shadow:0 5px 0 #0a0a0a">{{ br.btn }}</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ on.bubbles }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;display:flex;flex-direction:column;padding:0 22px 22px;min-height:0">
+  <div style="flex:1;position:relative;background:#f5f5f5;border-radius:32px;overflow:hidden;min-height:0">
+    <div style="position:absolute;left:0;right:0;top:20px;display:flex;flex-direction:column;align-items:center;gap:2px;z-index:3;pointer-events:none"><span style="font-size:34px;font-weight:800">Pop the bubbles!</span><span style="font-size:20px;font-weight:600;color:#737373">Take your time. They float up slowly.</span></div>
+    <span style="position:absolute;right:20px;top:20px;background:#0a0a0a;color:#fff;border-radius:20px;padding:2px 14px;font-size:18px;font-weight:700;z-index:3">{{ popWord }}</span>
+    <sc-for list="{{ pops }}" as="b" hint-placeholder-count="0"><span sc-camel-on-click="{{ b.onPop }}" style="position:absolute;left:{{ b.x }}%;bottom:-160px;width:{{ b.s }}px;height:{{ b.s }}px;margin-left:-{{ b.h }}px;border-radius:50%;border:4px solid #0a0a0a;background:radial-gradient(circle at 30% 28%,#fff 0 14%,rgba(255,255,255,.55) 15%);box-sizing:border-box;transform:translateY({{ b.ty }}px);opacity:{{ b.op }};transition:transform {{ b.dur }}s linear,opacity .15s;cursor:pointer;z-index:2"></span></sc-for>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ on.squeeze }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:0 24px 22px">
+  <div style="display:flex;gap:50px;align-items:center;height:230px">
+    <span style="display:block;width:190px;height:190px;background:url('{{ hands.img }}') center/contain no-repeat;transform:scaleX(-1) rotate({{ hands.rot }}deg) scale({{ hands.sc }});transition:{{ hands.tr }}"></span>
+    <span style="display:block;width:190px;height:190px;background:url('{{ hands.img }}') center/contain no-repeat;transform:rotate({{ hands.rot }}deg) scale({{ hands.sc }});transition:{{ hands.tr }}"></span>
+  </div>
+  <div style="display:flex;gap:10px"><sc-for list="{{ hands.dots }}" as="d" hint-placeholder-count="3"><span style="width:22px;height:22px;border-radius:50%;border:4px solid #0a0a0a;background:{{ d.bg }};box-sizing:border-box"></span></sc-for></div>
+  <span style="font-size:42px;font-weight:800;line-height:1">{{ hands.text }}</span>
+  <span style="font-size:22px;font-weight:600;color:#737373">{{ hands.sub }}</span>
+  <div style="margin-top:4px"><div sc-camel-on-click="{{ hands.onBtn }}" style="background:{{ hands.btnBg }};color:{{ hands.btnFg }};border:4px solid #0a0a0a;border-radius:44px;padding:6px 48px;font-size:26px;font-weight:800;cursor:pointer;box-shadow:0 5px 0 #0a0a0a">{{ hands.btn }}</div></div>
+</div>
+</sc-if>
+
+    <sc-if value="{{ on.cloud }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:0 30px 24px">
+  <span style="transform:translateY({{ bobY }}px);transition:transform .9s ease-in-out"><span style="width:220px;height:220px;border-radius:50%;background:#f2f2f2;display:flex;align-items:center;justify-content:center"><span style="display:block;width:130px;height:130px;background:url('{{ cl.icon }}') center/contain no-repeat"></span></span></span>
+  <span style="font-size:30px;font-weight:700;line-height:1.3;text-align:center;max-width:720px;color:#262626">{{ cl.text }}</span>
+  <div style="display:flex;gap:10px"><sc-for list="{{ cl.dots }}" as="d" hint-placeholder-count="5"><span style="width:18px;height:18px;border-radius:50%;border:3px solid #0a0a0a;background:{{ d.bg }};box-sizing:border-box"></span></sc-for></div>
+  <div sc-camel-on-click="{{ cl.onBtn }}" style="background:{{ cl.btnBg }};color:{{ cl.btnFg }};border:4px solid #0a0a0a;border-radius:44px;padding:6px 48px;font-size:26px;font-weight:800;cursor:pointer;box-shadow:0 5px 0 #0a0a0a">{{ cl.btn }}</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ on.senses }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:0 24px 24px">
+  <span style="width:160px;height:160px;border-radius:50%;background:#fff;border:6px solid #0a0a0a;box-shadow:0 8px 0 #0a0a0a;display:flex;align-items:center;justify-content:center;box-sizing:border-box"><span style="display:block;width:86px;height:86px;background:url('{{ sn.icon }}') center/contain no-repeat"></span></span>
+  <span style="font-size:40px;font-weight:800;line-height:1.1;text-align:center">{{ sn.text }}</span>
+  <div style="display:flex;gap:14px"><sc-for list="{{ sn.dots }}" as="d" hint-placeholder-count="5"><span style="width:46px;height:46px;border-radius:50%;border:5px solid #0a0a0a;background:{{ d.bg }};box-sizing:border-box;transition:background-color .2s"></span></sc-for></div>
+  <sc-if value="{{ sn.going }}" hint-placeholder-val="{{ true }}"><div sc-camel-on-click="{{ sn.onFound }}" style="background:#0a0a0a;color:#fff;border-radius:44px;padding:12px 56px;font-size:30px;font-weight:800;cursor:pointer;box-shadow:0 6px 0 #525252">Found one!</div></sc-if>
+  <div style="display:flex;gap:8px"><sc-for list="{{ sn.rounds }}" as="d" hint-placeholder-count="5"><span style="width:14px;height:14px;border-radius:50%;background:{{ d.bg }}"></span></sc-for></div>
+</div>
+</sc-if>
+
+<sc-if value="{{ on.belly }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:0 24px 24px">
+  <div style="position:relative;width:520px;height:270px;display:flex;align-items:flex-end;justify-content:center">
+    <span style="position:absolute;left:50%;bottom:{{ by.y }}px;transform:translateX(-50%);transition:{{ by.tr }};z-index:2"><span style="width:110px;height:110px;border-radius:{{ buddy.shape }};background:{{ buddy.bg }};border:5px solid #0a0a0a;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;box-sizing:border-box;flex:none"><span style="display:flex;gap:22px"><span style="width:14px;height:18px;border-radius:50%;background:{{ buddy.eye }}"></span><span style="width:14px;height:18px;border-radius:50%;background:{{ buddy.eye }}"></span></span><span style="width:34px;height:14px;border:4px solid {{ buddy.eye }};border-top:none;border-radius:0 0 30px 30px;box-sizing:border-box"></span></span></span>
+    <span style="width:520px;height:120px;border-radius:260px 260px 0 0;background:#f2f2f2;border:6px solid #0a0a0a;border-bottom:none;box-sizing:border-box;transform:scaleY({{ by.belly }});transform-origin:bottom;transition:{{ by.tr }}"></span>
+  </div>
+  <span style="font-size:40px;font-weight:800;line-height:1">{{ by.text }}</span>
+  <span style="font-size:22px;font-weight:600;color:#737373">{{ by.sub }}</span>
+  <div style="display:flex;gap:10px"><sc-for list="{{ by.dots }}" as="d" hint-placeholder-count="5"><span style="width:18px;height:18px;border-radius:50%;border:3px solid #0a0a0a;background:{{ d.bg }};box-sizing:border-box"></span></sc-for></div>
+  <div sc-camel-on-click="{{ by.onBtn }}" style="background:{{ by.btnBg }};color:{{ by.btnFg }};border:4px solid #0a0a0a;border-radius:44px;padding:6px 48px;font-size:26px;font-weight:800;cursor:pointer;box-shadow:0 5px 0 #0a0a0a">{{ by.btn }}</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ on.brave }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;display:grid;grid-template-columns:1.3fr 1fr;gap:20px;padding:0 24px 24px;min-height:0">
+  <div style="display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:12px;min-height:0">
+    <sc-for list="{{ bw.words }}" as="w" hint-placeholder-count="6"><div sc-camel-on-click="{{ w.onTap }}" style="background:{{ w.bg }};color:{{ w.fg }};border:4px solid #0a0a0a;border-radius:24px;padding:10px 16px;display:flex;align-items:center;font-size:22px;font-weight:800;line-height:1.15;cursor:pointer;box-shadow:0 5px 0 #0a0a0a;box-sizing:border-box">{{ w.label }}</div></sc-for>
+  </div>
+  <div style="background:#f5f5f5;border-radius:30px;padding:22px;display:flex;flex-direction:column;gap:12px;min-height:0">
+    <span style="font-size:28px;font-weight:800">★ My brave card</span>
+    <sc-for list="{{ bw.chosen }}" as="c" hint-placeholder-count="0"><span style="background:#fff;border-radius:16px;padding:10px 14px;font-size:21px;font-weight:700">{{ c }}</span></sc-for>
+    <sc-if value="{{ bw.empty }}" hint-placeholder-val="{{ true }}"><span style="font-size:19px;font-weight:600;color:#8c8c8c">Pick up to 3 brave words.</span></sc-if>
+    <div sc-camel-on-click="{{ bw.onSay }}" style="margin-top:auto;background:#0a0a0a;color:#fff;border-radius:40px;padding:12px;text-align:center;font-size:24px;font-weight:800;cursor:pointer;opacity:{{ bw.op }};box-shadow:0 5px 0 #525252">Say them with me</div>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ on.feel }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:30px;padding:6px 30px 30px">
+  <div style="display:flex;gap:22px">
+    <sc-for list="{{ faces }}" as="c" hint-placeholder-count="5"><div sc-camel-on-click="{{ c.onTap }}" style="display:flex;flex-direction:column;align-items:center;gap:10px;cursor:pointer;transform:{{ c.tf }};transition:transform .25s"><span style="width:140px;height:140px;border-radius:50%;background:{{ c.bg }};border:5px solid #0a0a0a;box-shadow:0 8px 0 #0a0a0a;display:flex;align-items:center;justify-content:center;box-sizing:border-box"><span style="display:block;width:100px;height:100px;background:url('{{ c.icon }}') center/contain no-repeat"></span></span><span style="font-size:{{ faceSize }}px;font-weight:800;color:{{ faceCol }}">{{ c.label }}</span></div></sc-for>
+  </div>
+  <sc-if value="{{ feelPicked }}" hint-placeholder-val="{{ false }}"><div style="display:flex;gap:22px;align-items:center">
+    <sc-for list="{{ feelActs }}" as="a" hint-placeholder-count="2"><div sc-camel-on-click="{{ a.onTap }}" style="display:flex;align-items:center;gap:14px;background:{{ a.bg }};color:{{ a.fg }};border:5px solid #0a0a0a;border-radius:50px;padding:10px 30px 10px 10px;cursor:pointer;box-shadow:0 6px 0 #0a0a0a"><span style="width:72px;height:72px;border-radius:50%;background:{{ a.fg }};display:flex;align-items:center;justify-content:center"><span style="display:block;width:40px;height:40px;background:url('{{ a.icon }}') center/contain no-repeat"></span></span><span style="font-size:28px;font-weight:800">{{ a.label }}</span></div></sc-for>
+  </div></sc-if>
+</div>
+</sc-if>
+
+<sc-if value="{{ on.tell }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:1fr 1fr;gap:16px;padding:4px 24px 26px;min-height:0">
+  <sc-for list="{{ tellCards }}" as="c" hint-placeholder-count="8"><div sc-camel-on-click="{{ c.onTap }}" style="background:{{ c.bg }};color:{{ c.fg }};border:5px solid #0a0a0a;border-radius:30px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;cursor:pointer;box-sizing:border-box;box-shadow:0 7px 0 #0a0a0a;transform:scale({{ c.sc }});transition:transform .2s,background-color .2s"><span style="display:block;width:80px;height:80px;background:url('{{ c.icon }}') center/contain no-repeat"></span><span style="font-size:{{ tellSize }}px;font-weight:800;text-align:center;line-height:1.05;padding:0 8px">{{ c.label }}</span></div></sc-for>
+</div>
+</sc-if>
+
+    <sc-if value="{{ hasSent }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:15;background:#0a0a0a;color:#fff;border-radius:44px;padding:10px 28px 10px 10px;display:flex;align-items:center;gap:14px;box-shadow:0 12px 30px rgba(0,0,0,.3)"><span style="width:58px;height:58px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;position:relative"><span style="display:block;width:30px;height:30px;background:url('{{ icPhone }}') center/contain no-repeat"></span><span style="position:absolute;right:-5px;bottom:-5px;width:28px;height:28px;border-radius:50%;background:#fff;border:3px solid #0a0a0a;display:flex;align-items:center;justify-content:center;font-size:15px;color:#0a0a0a;box-sizing:border-box">✓</span></span><div style="display:flex;flex-direction:column;line-height:1.15"><span style="font-size:24px;font-weight:800">Mom got it!</span><span style="font-family:'Geist',sans-serif;font-size:13px;opacity:.7">{{ sentText }}</span></div></div></sc-if>
+
+    <sc-if value="{{ fin.show }}" hint-placeholder-val="{{ false }}">
+      <div style="position:absolute;left:22px;right:22px;bottom:22px;z-index:16;background:#fff;border:5px solid #0a0a0a;border-radius:32px;box-shadow:0 8px 0 #0a0a0a;padding:14px 16px;display:flex;align-items:center;gap:14px;box-sizing:border-box">
+        <span style="width:68px;height:68px;border-radius:50%;background:#0a0a0a;color:#fff;display:flex;align-items:center;justify-content:center;font-size:36px;flex:none">★</span>
+        <span style="flex:1;font-size:27px;font-weight:800;line-height:1.1">{{ fin.title }}</span>
+        <span sc-camel-on-click="{{ fin.again }}" style="background:#0a0a0a;color:#fff;border-radius:30px;padding:10px 22px;font-size:21px;font-weight:800;cursor:pointer;white-space:nowrap;box-shadow:0 4px 0 #525252">↺ Play again</span>
+        <span sc-camel-on-click="{{ fin.other }}" style="background:#fff;border:4px solid #0a0a0a;border-radius:30px;padding:6px 20px;font-size:21px;font-weight:800;cursor:pointer;white-space:nowrap">Something else</span>
+        <span sc-camel-on-click="{{ goHome }}" style="display:flex;align-items:center;gap:8px;background:#fff;border:4px solid #0a0a0a;border-radius:30px;padding:6px 20px;font-size:21px;font-weight:800;cursor:pointer;white-space:nowrap"><span style="display:block;width:22px;height:22px;background:url('{{ icHouse }}') center/contain no-repeat"></span>My path</span>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ soonToast }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;left:50%;top:100px;transform:translateX(-50%);z-index:14;background:#0a0a0a;color:#fff;border-radius:40px;padding:10px 28px 10px 10px;display:flex;align-items:center;gap:14px;box-shadow:0 12px 30px rgba(0,0,0,.3);white-space:nowrap"><span style="width:52px;height:52px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;transform:rotate({{ bellRot }}deg);transition:transform .45s"><span style="display:block;width:26px;height:26px;background:url('{{ icBell }}') center/contain no-repeat"></span></span><span style="font-size:26px;font-weight:800">Almost your turn, Mia!</span></div></sc-if>
+
+    <sc-if value="{{ how.show }}" hint-placeholder-val="{{ false }}">
+      <div style="position:absolute;inset:0;background:rgba(255,255,255,.97);z-index:18;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:30px">
+        <div style="position:relative;width:200px;height:200px;border-radius:50%;background:#f2f2f2;display:flex;align-items:center;justify-content:center"><span style="display:block;width:120px;height:120px;background:url('{{ how.art }}') center/contain no-repeat"></span><sc-if value="{{ how.hand }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;right:0;bottom:-6px;transform:translateY({{ handY }}px);transition:transform .45s"><span style="display:block;width:72px;height:72px;background:url('{{ icHand }}') center/contain no-repeat"></span></span></sc-if></div>
+        <div style="display:flex;align-items:center;gap:14px"><span style="font-size:48px;font-weight:800;line-height:1">{{ how.title }}</span><span sc-camel-on-click="{{ how.onHear }}" style="width:54px;height:54px;border-radius:50%;border:4px solid #0a0a0a;box-shadow:0 4px 0 #0a0a0a;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:22px;box-sizing:border-box">♪</span></div>
+        <span style="font-size:28px;font-weight:600;color:#404040;max-width:640px;text-align:center;line-height:1.25">{{ how.line }}</span>
+        <div sc-camel-on-click="{{ how.onGo }}" style="background:#0a0a0a;color:#fff;border-radius:44px;padding:12px 60px;font-size:30px;font-weight:800;cursor:pointer;box-shadow:0 6px 0 #525252">Let's play!</div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ celebrate }}" hint-placeholder-val="{{ false }}">
+      <div style="position:absolute;inset:0;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;z-index:20">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;transform:scale({{ popScale }});transition:transform .5s cubic-bezier(.2,1.6,.4,1)">
+          <span style="transform:translateY({{ bobY }}px);transition:transform .9s ease-in-out"><span style="width:64px;height:64px;border-radius:{{ buddy.shape }};background:{{ buddy.bg }};border:3px solid #0a0a0a;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;box-sizing:border-box;flex:none"><span style="display:flex;gap:13px"><span style="width:8px;height:10px;border-radius:50%;background:{{ buddy.eye }}"></span><span style="width:8px;height:10px;border-radius:50%;background:{{ buddy.eye }}"></span></span><span style="width:20px;height:8px;border:2.5px solid {{ buddy.eye }};border-top:none;border-radius:0 0 20px 20px;box-sizing:border-box"></span></span></span>
+          <span style="position:relative;width:170px;height:170px;border-radius:50%;background:#fff;border:7px solid #0a0a0a;box-shadow:0 9px 0 #0a0a0a;display:flex;align-items:center;justify-content:center;box-sizing:border-box"><span style="display:block;width:76px;height:76px;background:url('{{ arrive.icon }}') center/contain no-repeat"></span><span style="position:absolute;right:-12px;top:-12px;width:60px;height:60px;border-radius:50%;background:#fff;border:5px solid #0a0a0a;display:flex;align-items:center;justify-content:center;box-sizing:border-box;transform:rotate({{ bellRot }}deg);transition:transform .45s"><span style="display:block;width:28px;height:28px;background:url('{{ icBell }}') center/contain no-repeat"></span></span></span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:6px"><span style="font-size:56px;font-weight:800;line-height:1">{{ arrive.title }}</span><span style="font-size:28px;font-weight:600;color:#525252">{{ arrive.sub }}</span></div>
+        <span sc-camel-on-click="{{ seePath }}" style="background:#0a0a0a;color:#fff;border-radius:44px;padding:12px 52px;font-size:28px;font-weight:800;cursor:pointer;box-shadow:0 6px 0 #525252">See my path</span>
+        <sc-if value="{{ notHome }}" hint-placeholder-val="{{ false }}"><span sc-camel-on-click="{{ keepPlaying }}" style="font-size:22px;font-weight:700;color:#737373;cursor:pointer;margin-top:-8px">Keep playing</span></sc-if>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ coach }}" hint-placeholder-val="{{ false }}">
+      <div style="position:absolute;inset:0;background:rgba(255,255,255,.97);z-index:25;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;padding:24px 40px;box-sizing:border-box">
+        <div style="display:flex;align-items:center;gap:16px"><span style="width:56px;height:56px;border-radius:50%;background:#0a0a0a;color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;transform:scale({{ speakSc }});transition:transform .45s">♪</span><span style="font-size:42px;font-weight:800;letter-spacing:-.01em">{{ coachTitle }}</span></div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;width:100%"><div style="position:relative;background:#fff;border:5px solid #0a0a0a;border-radius:30px;padding:18px 16px 20px;display:flex;flex-direction:column;align-items:center;gap:12px;box-sizing:border-box;box-shadow:0 7px 0 #0a0a0a"><span style="position:absolute;left:14px;top:12px;width:38px;height:38px;border-radius:50%;background:#0a0a0a;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800">1</span><div style="height:176px;display:flex;align-items:center;justify-content:center"><div style="display:flex;align-items:center;gap:10px"><div style="display:flex;flex-direction:column;align-items:center;gap:4px"><span style="width:54px;height:54px;border-radius:{{ buddy.shape }};background:{{ buddy.bg }};border:3px solid #0a0a0a;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;box-sizing:border-box;flex:none"><span style="display:flex;gap:11px"><span style="width:7px;height:9px;border-radius:50%;background:{{ buddy.eye }}"></span><span style="width:7px;height:9px;border-radius:50%;background:{{ buddy.eye }}"></span></span><span style="width:17px;height:7px;border:2.5px solid {{ buddy.eye }};border-top:none;border-radius:0 0 20px 20px;box-sizing:border-box"></span></span><span style="width:96px;height:96px;border-radius:50%;background:#fff;border:6px solid #0a0a0a;box-shadow:0 7px 0 #0a0a0a;display:flex;align-items:center;justify-content:center;box-sizing:border-box;flex:none"><span style="display:block;width:42px;height:42px;background:url('{{ icChair }}') center/contain no-repeat"></span></span></div><span style="align-self:flex-start;margin-top:14px;background:#fff;border:3px solid #0a0a0a;border-radius:18px;height:34px;padding:0 12px;display:flex;align-items:center;gap:5px;box-sizing:border-box"><sc-for list="{{ dots }}" as="d" hint-placeholder-count="3"><span style="width:9px;height:9px;border-radius:50%;background:#0a0a0a;transform:translateY({{ d.y }}px);transition:transform .3s"></span></sc-for></span></div></div><span style="font-size:26px;font-weight:800;text-align:center;line-height:1.1">{{ cap1 }}</span></div><div style="position:relative;background:#fff;border:5px solid #0a0a0a;border-radius:30px;padding:18px 16px 20px;display:flex;flex-direction:column;align-items:center;gap:12px;box-sizing:border-box;box-shadow:0 7px 0 #0a0a0a"><span style="position:absolute;left:14px;top:12px;width:38px;height:38px;border-radius:50%;background:#0a0a0a;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800">2</span><div style="height:176px;display:flex;align-items:center;justify-content:center"><span style="position:relative;display:block"><span style="width:116px;height:116px;border-radius:50%;background:#0a0a0a;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;box-sizing:border-box;flex:none"><span style="display:flex;gap:19px"><span style="width:12px;height:16px;border-radius:50%;background:#fff"></span><span style="width:12px;height:16px;border-radius:50%;background:#fff"></span></span><span style="width:32px;height:14px;border:4px solid #fff;border-top:none;border-radius:0 0 20px 20px;box-sizing:border-box"></span></span><span style="position:absolute;right:-16px;top:-12px;width:56px;height:56px;border-radius:50%;background:#fff;border:4px solid #0a0a0a;display:flex;align-items:center;justify-content:center;box-sizing:border-box;transform:rotate({{ bellRot }}deg);transition:transform .45s"><span style="display:block;width:28px;height:28px;background:url('{{ icBell }}') center/contain no-repeat"></span></span></span></div><span style="font-size:26px;font-weight:800;text-align:center;line-height:1.1">{{ cap2 }}</span></div><div style="position:relative;background:#fff;border:5px solid #0a0a0a;border-radius:30px;padding:18px 16px 20px;display:flex;flex-direction:column;align-items:center;gap:12px;box-sizing:border-box;box-shadow:0 7px 0 #0a0a0a"><span style="position:absolute;left:14px;top:12px;width:38px;height:38px;border-radius:50%;background:#0a0a0a;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800">3</span><div style="height:176px;display:flex;align-items:center;justify-content:center"><div style="display:flex;align-items:flex-end;gap:8px"><span style="width:60px;height:60px;border-radius:50%;background:#0a0a0a;box-shadow:0 5px 0 #0a0a0a;display:flex;align-items:center;justify-content:center;color:#fff;font-size:26px;flex:none;margin-bottom:12px">★</span><span style="width:34px;border-top:5px dashed #0a0a0a;margin-bottom:42px"></span><div style="display:flex;flex-direction:column;align-items:center;gap:4px;transform:translateY({{ hopY }}px);transition:transform .45s"><span style="width:48px;height:48px;border-radius:{{ buddy.shape }};background:{{ buddy.bg }};border:3px solid #0a0a0a;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;box-sizing:border-box;flex:none"><span style="display:flex;gap:10px"><span style="width:6px;height:8px;border-radius:50%;background:{{ buddy.eye }}"></span><span style="width:6px;height:8px;border-radius:50%;background:{{ buddy.eye }}"></span></span><span style="width:15px;height:6px;border:2.5px solid {{ buddy.eye }};border-top:none;border-radius:0 0 20px 20px;box-sizing:border-box"></span></span><span style="width:86px;height:86px;border-radius:50%;background:#fff;border:6px solid #0a0a0a;box-shadow:0 7px 0 #0a0a0a;display:flex;align-items:center;justify-content:center;box-sizing:border-box;flex:none"><span style="display:block;width:38px;height:38px;background:url('{{ icDoc }}') center/contain no-repeat"></span></span></div></div></div><span style="font-size:26px;font-weight:800;text-align:center;line-height:1.1">{{ cap3 }}</span></div></div>
+        <div style="display:flex;align-items:center;gap:14px;background:#f2f2f2;border-radius:30px;padding:10px 24px 10px 10px"><span style="width:52px;height:52px;border-radius:50%;background:#0a0a0a;display:flex;align-items:center;justify-content:center;flex:none"><span style="display:block;width:28px;height:28px;background:url('{{ icGame }}') center/contain no-repeat"></span></span><span style="font-size:24px;font-weight:700">{{ gameNote }}</span></div>
+        <div sc-camel-on-click="{{ closeCoach }}" style="background:#0a0a0a;color:#fff;border-radius:44px;padding:10px 64px;font-size:30px;font-weight:800;cursor:pointer;box-shadow:0 6px 0 #525252">Got it!</div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ grown }}" hint-placeholder-val="{{ false }}">
+      <div style="position:absolute;inset:0;background:rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;font-family:'Geist',sans-serif;z-index:30">
+        <div style="width:440px;background:#fff;border-radius:24px;padding:26px;display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:20px;font-weight:600">For grown-ups</span><span sc-camel-on-click="{{ closeGrown }}" style="cursor:pointer;font-size:14px;color:#737373">Close</span></div>
+          <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:13px;color:#737373">Words for age</span><div style="display:flex;background:#f2f2f2;border-radius:10px;padding:3px;gap:3px"><sc-for list="{{ bands }}" as="b" hint-placeholder-count="2"><span sc-camel-on-click="{{ b.onPick }}" style="flex:1;text-align:center;padding:8px;border-radius:8px;cursor:pointer;font-size:14px;background:{{ b.bg }};font-weight:{{ b.w }}">{{ b.label }}</span></sc-for></div></div>
+          <div sc-camel-on-click="{{ togglePoke }}" style="display:flex;align-items:center;gap:12px;background:#f5f5f5;border-radius:14px;padding:12px 14px;cursor:pointer"><div style="display:flex;flex-direction:column;flex:1;gap:2px"><span style="font-size:14px;font-weight:600">Needle prep (poke plan)</span><span style="font-size:12px;color:#737373">Only turn on if Mia may need a poke. Details can make some kids more worried.</span></div><span style="width:44px;height:26px;border-radius:13px;background:{{ pokeTbg }};position:relative;flex:none"><span style="position:absolute;top:3px;left:{{ pokeTl }}px;width:20px;height:20px;border-radius:50%;background:#fff;transition:left .2s"></span></span></div><div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:13px;color:#737373">Mia can</span><div style="display:flex;background:#f2f2f2;border-radius:10px;padding:3px;gap:3px"><sc-for list="{{ modeOpts2 }}" as="b" hint-placeholder-count="2"><span sc-camel-on-click="{{ b.onTap }}" style="flex:1;text-align:center;padding:8px;border-radius:8px;cursor:pointer;font-size:14px;background:{{ b.bg }};font-weight:{{ b.w }}">{{ b.label }}</span></sc-for></div><span style="font-size:12px;color:#8c8c8c">Pictures + sound hides most words. Both views read aloud.</span></div><div style="background:#f5f5f5;border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;font-weight:600">Linked to Mia's visit · K7Q</span><span style="font-size:12px;color:#737373">The journey moves when her visit moves. Nothing medical is shown.</span></div>
+          <div sc-camel-on-click="{{ reset }}" style="background:#0a0a0a;color:#fff;border-radius:12px;padding:12px;text-align:center;font-size:14px;font-weight:600;cursor:pointer">Done: wipe and reset for the next child</div>
+        </div>
+      </div>
+    </sc-if>
+  </div>
+
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="">
+class Component extends DCLogic {
+  state = this.initial();
+  timers = [];
+  canvasRef = React.createRef();
+  threadRef = React.createRef();
+  nodes() {
+    const s = this.state, C = 'Mia', P = ['Pip', 'Bo', 'Kiki', 'Dot'][s.buddy];
+    const SL = ['We just came in.', 'The nurse just said hi.', "We're at the waiting spot. Next, a doctor says hi!", 'The doctor is here to help.', 'Time for a quick test.', 'Home time is coming soon!'][s.step];
+    return {
+      start: { say: ['Hey ' + C + '! How are you feeling right now?'], opts: [['Scared', 'scared'], ['Bored', 'bored'], ['It hurts', 'hurts'], ['I miss home', 'home'], ["What's happening?", 'what']] },
+      scared: { say: ["That's OK. Lots of kids feel scared here.", 'What feels scary?'], opts: [['A needle or poke', 'needle'], ['The doctor', 'doctor'], ['Being here', 'here'], ["I don't know", 'dunno']] },
+      needle: { say: ['Pokes can feel scary. Even grown-ups feel that way.', 'Want to know what really happens?'], opts: [['Yes, tell me', 'needle2'], ['No thanks', 'nothanks']] },
+      needle2: { say: ['First, a nurse cleans a spot with a cold wipe.', "Then a quick poke, like a little pinch. It's over in a few seconds.", "And you get to pick your superpowers for it. Let's make your poke plan!"], opts: [['Make my plan', 'plan']] },
+      plan: { say: ['Tap everything you want. Pick as many as you like.'], plan: true },
+      planDone: { say: ["That's a great plan!", 'I sent it to your grown-up, so you can show the nurse together.'], card: true, sys: "Poke plan sent to Mom's phone", opts: [['Practice with me', 'practice'], ["I'm ready", 'ready']] },
+      practice: { say: ["Let's practice blowing out candles. It really helps during a poke."], opts: [['Open candles', '@candles']] },
+      ready: { say: ["You're so brave. I'll be right here."], opts: [['Back to my journey', '@home'], ['Talk about something else', 'menu']] },
+      nothanks: { say: ["That's OK. We can talk about it later.", 'Want to do something fun instead?'], opts: [['Play a game', '@play'], ['Something calm', '@calm']] },
+      doctor: { say: ['Doctors are helpers.', 'They ask how you feel and might listen to your heart. You can ask them anything!'], opts: [['What can I ask?', 'ask'], ['OK', 'menu']] },
+      ask: { say: ['You could ask: "Will it hurt?", "What are you doing?" or "Can my grown-up stay?"'], opts: [['Thanks, ' + P, 'menu']] },
+      here: { say: ['Hospitals are big and busy.', SL], opts: [['Show my journey', '@home'], ['Something calm', '@calm']] },
+      dunno: { say: ["That's OK. Let's take three big breaths together.", 'In… and out. In… and out. In… and out.'], opts: [['I feel a bit better', 'better'], ['Still scared', 'tellgrown']] },
+      better: { say: ["Nice breathing! I'm proud of you."], opts: [['Play a game', '@play'], ['Talk more', 'menu']] },
+      tellgrown: { say: ["Thanks for telling me. Let's get your grown-up to give you a big hug."], sys: "Sent to Mom's phone: Mia is feeling scared", opts: [['OK', 'menu']] },
+      bored: { say: ["Waiting is the boring part. Let's fix that!"], opts: [['Play a game', '@play'], ['I spy', '@ispy']] },
+      hurts: { say: ['Thank you for telling me.', "Let's tell your grown-up right now so they can get help."], sys: "Sent to Mom's phone: Mia says it hurts more", opts: [['OK', 'menu']] },
+      home: { say: ['I bet! What do you miss most?'], opts: [['My bed', 'home2'], ['My pet', 'home2'], ['My toys', 'home2']] },
+      home2: { say: ['That sounds really nice. Home time is coming.', 'Want to draw it while you wait?'], opts: [['Draw it', '@draw'], ['Talk more', 'menu']] },
+      menu: (() => { const seen = this.state.seenNodes || []; const all = [['I feel scared', 'scared'], ['I feel bored', 'bored'], ['Something hurts', 'hurts'], ['I miss home', 'home'], ['What happens here?', 'what']]; const left = all.filter(o => !seen.includes(o[1])); return left.length ? { say: ['What do you want to talk about next?'], opts: [...left.slice(0, 3), ["I'm done talking", '@home']] } : { say: ['We talked about lots of things, ' + C + '! Want to do something fun?'], opts: [['Play a game', '@play'], ['Something calm', '@calm'], ["I'm done", '@home']] }; })(),
+      what: { say: [SL], opts: [['Show my journey', '@home'], ['Talk more', 'menu']] }
+    };
+  }
+  goNode(key) {
+    if (key.startsWith('@')) { const sc = key.slice(1); this.setState(x => ({ screen: sc, hist: sc === 'home' ? [] : [...x.hist, 'talk'], ...(sc === 'candles' ? { lit: 5, phase: 'idle' } : {}) })); return; }
+    const n = this.nodes()[key]; this.setState(x => ({ node: null, typing: true, seenNodes: [...(x.seenNodes || []), key] })); this.later(() => { if (this.state.screen === 'talk') this.speak(n.say.join(' ')); }, 300);
+    let t = 600;
+    n.say.forEach((line, i) => { this.later(() => { this.setState(x => ({ msgs: [...x.msgs, { from: 'pip', text: line }], typing: i < n.say.length - 1 })); this.scrollThread(); }, t); t += 900; });
+    if (n.card) this.later(() => { this.setState(x => ({ msgs: [...x.msgs, { from: 'card' }] })); this.scrollThread(); }, t - 500);
+    if (n.sys) this.later(() => { this.setState(x => ({ msgs: [...x.msgs, { from: 'sys', text: n.sys }] })); this.scrollThread(); }, t - 300);
+    this.later(() => { this.setState({ node: key, typing: false }); this.scrollThread(); }, t - 200);
+  }
+  scrollThread() { [40, 200].forEach(d => setTimeout(() => { const t = this.threadRef.current || document.querySelector('[data-thread]'); if (t) t.scrollTop = t.scrollHeight; }, d)); }
+  pick(label, key) { this.setState(x => ({ msgs: [...x.msgs, { from: 'kid', text: label }], node: null })); this.scrollThread(); this.goNode(key); }
+  initial() { return { screen: 'hello', hist: [], acc: 0, docUsed: [], docTool: null, page: 0, msgs: [], node: null, typing: false, plan: [], listening: false, buddy: 0, band: 0, step: 2, stone: null, read: false, grown: false, cards: this.deal(), flip: [], matched: [], lit: 5, phase: 'idle', popped: [], spy: 0, sq: 0, bob: false, celebrate: false, pop: false, soonStep: -1, pops: [], popped2: 0, skyN: 0, voiceIdx: 0, cph: 'idle', cScene: 0, sRound: 0, sCount: 0, yph: 'idle', yRound: 0, braveSel: [], soonToast: false, spyFound: 0, pokeOn: false, seenHow: [], bph: 'idle', bRound: 0, qph: 'idle', qRound: 0, mute: false, voiceOff: true, ph0: 0, floats: [], blown: 0, bubMsg: '', holdBub: null, juice: 0, sqMsg: '', sqHold: null, pic: false, feel: null, sent: null, talking: false, tellSel: null, coach: false, coachSeen: false, auto: false, autoLeft: 40, hop: false, tick: 0, brush: 1, counted: [] }; }
+  deal() { const f = ['●', '▲', '■', '★']; const d = [...f, ...f]; for (let i = d.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [d[i], d[j]] = [d[j], d[i]]; } return d; }
+  componentDidMount() {
+    if (window.__wpInst && window.__wpInst !== this) { try { window.__wpInst.kill(); } catch (e) {} }
+    window.__wpInst = this; this._dead = false;
+    try { window.speechSynthesis && window.speechSynthesis.addEventListener('voiceschanged', () => { if (this.alive()) this.forceUpdate(); }); } catch (e) {}
+    this.bobT = setInterval(() => this.setState(s => { const t = (s.tick || 0) + 1; return { tick: t, bob: Math.floor(t / 2) % 2 === 1 }; }), 450);
+    this.popT = setInterval(() => { const s = this.state; if (!this.alive() || s.screen !== 'bubbles' || this._howOn || (s.popped2 || 0) >= 15) return; this.spawnPop(); }, 1100);
+    this.autoT = setInterval(() => { const s = this.state; if (!s.auto || s.step >= 5 || s.screen === 'hello' || s.celebrate || s.coach || s.grown) return; if (s.autoLeft <= 1) this.advanceStep(); else { if (s.autoLeft - 1 === 12 && s.soonStep !== s.step) this.markSoon(); this.setState({ autoLeft: s.autoLeft - 1 }); } }, 1000);
+  }
+  componentWillUnmount() { this.timers.forEach(clearTimeout); clearInterval(this.bobT); clearInterval(this.autoT); clearInterval(this.popT); this._dead = true; try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch (e) {} }
+  later(fn, ms) { this.timers.push(setTimeout(() => { if (this.alive()) fn(); }, ms)); }
+  speak(t) {
+    if (!this.alive() || this.state.voiceOff) return;
+    { const s = this.state; const guided = (s.screen === 'candles' && ['in', 'out', 'rest', 'done'].includes(s.phase)) || (s.screen === 'bubbles' && ['in', 'out', 'rest', 'done'].includes(s.bph)) || (s.screen === 'squeeze' && ['tight', 'go', 'done'].includes(s.qph)) || (s.screen === 'cloud' && ['run', 'done'].includes(s.cph)) || (s.screen === 'belly' && ['in', 'out', 'done'].includes(s.yph));
+      if (!guided && Date.now() - (this._lastTap || 0) > 6000) return; }
+    const ss = window.speechSynthesis;
+    if (!ss || typeof SpeechSynthesisUtterance === 'undefined') { this.setState({ noSound: true }); return; }
+    if (!t) return;
+    const text = String(t).replace(/…/g, '. ');
+    clearTimeout(this._spT); clearTimeout(this._spEnd);
+    try { ss.cancel(); } catch (e) {}
+    this._spT = setTimeout(() => {
+      if (!this.alive()) return;
+      try {
+        const u = new SpeechSynthesisUtterance(text);
+        const list = this.voiceList(); const v = list.length ? list[(this.state.voiceIdx || 0) % list.length] : null;
+        if (v) { u.voice = v; u.lang = v.lang; } else u.lang = 'en-US';
+        u.rate = 0.93; u.pitch = 1.05; u.volume = 1;
+        const done = () => { if (this._utt === u) this.setState({ talking: false }); };
+        u.onend = done; u.onerror = done;
+        this._utt = u;
+        ss.resume(); ss.speak(u);
+        this.setState({ talking: true });
+        this._spEnd = setTimeout(done, 1500 + text.split(' ').length * 420);
+      } catch (e) { this.setState({ talking: false }); }
+    }, 140);
+  }
+  componentDidUpdate() {
+    const s = this.state;
+    if (s.screen !== this._ls) { this._ls = s.screen; clearTimeout(this._spT); try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch (e) {} this._cr = (this._cr || 0) + 1; this._br = (this._br || 0) + 1; this._qr = (this._qr || 0) + 1; this._yr = (this._yr || 0) + 1; this._clr = (this._clr || 0) + 1; }
+    const k = s.screen + '|' + s.step + '|' + s.celebrate + '|' + s.coach + '|' + s.pic + '|' + this._howOn;
+    if (k === this._k) return;
+    const first = this._k == null; this._k = k;
+    if (first) return;
+    if (Date.now() - (this._lastTap || 0) < 1500) {
+      const sayKey = s.screen + '|' + (s.screen === 'home' ? s.step : '') + '|' + (this._howOn ? 'how' : '') + '|' + (s.celebrate ? 'c' : '') + (s.coach ? 'k' : '') + '|' + (s.pic ? 'p' : '');
+      this._said = this._said || {};
+      if (this._said[sayKey]) return;
+      this._said[sayKey] = true;
+      this.speak(this._say);
+    }
+  }
+  sendGrown(text) { this.later(() => this.sfx('sent'), 500); const id = Date.now(); this.setState({ sent: { id, text } }); this.later(() => this.setState(x => (x.sent && x.sent.id === id ? { sent: null } : null)), 3600); }
+  ac() { if (!this._ac) { const C = window.AudioContext || window.webkitAudioContext; if (!C) return null; try { this._ac = new C(); } catch (e) { return null; } } if (this._ac.state === 'suspended') this._ac.resume(); return this._ac; }
+  noiseBuf(a) { if (this._nb) return this._nb; const n = a.sampleRate * 6, b = a.createBuffer(1, n, a.sampleRate), d = b.getChannelData(0); for (let i = 0; i < n; i++) d[i] = Math.random() * 2 - 1; this._nb = b; return b; }
+  tone(fr, dur, ty, vol, dl, sl) { const a = this.ac(); if (!a) return; const t = a.currentTime + (dl || 0); const o = a.createOscillator(), g = a.createGain(); o.type = ty || 'sine'; o.frequency.setValueAtTime(fr, t); if (sl) o.frequency.exponentialRampToValueAtTime(sl, t + dur); g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(vol || 0.1, t + 0.012); g.gain.exponentialRampToValueAtTime(0.0001, t + dur); o.connect(g); g.connect(a.destination); o.start(t); o.stop(t + dur + 0.05); }
+  nz(dur, vol, dl, f0, f1, swell) { const a = this.ac(); if (!a) return; const t = a.currentTime + (dl || 0); const src = a.createBufferSource(); src.buffer = this.noiseBuf(a); const fl = a.createBiquadFilter(); fl.type = 'bandpass'; fl.Q.value = 0.8; fl.frequency.setValueAtTime(f0, t); fl.frequency.exponentialRampToValueAtTime(f1, t + dur); const g = a.createGain(); g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(vol, t + (swell ? dur * 0.7 : 0.02)); g.gain.exponentialRampToValueAtTime(0.0001, t + dur); src.connect(fl); fl.connect(g); g.connect(a.destination); src.start(t); src.stop(t + dur + 0.05); }
+  sfx(n, k) {
+    if (this.state.mute || !this.alive() || !this.ac()) return; const T = (a, b, c, d, e, g) => this.tone(a, b, c, d, e, g);
+    const S = {
+      tap: () => T(660, .06, 'sine', .04), flip: () => this.nz(.09, .08, 0, 2500, 900), nope: () => { T(330, .12, 'sine', .05); T(262, .16, 'sine', .05, .08); },
+      match: () => { T(1046, .18, 'triangle', .12); T(1318, .3, 'triangle', .12, .1); }, win: () => [523, 659, 784, 1046].forEach((x, i) => T(x, .3, 'triangle', .12, i * .1)),
+      twinkle: () => { const p = [784, 880, 1046, 1175, 1318, 1568, 1760, 2093, 2349][(k || 0) % 9]; T(p, .55, 'triangle', .1); T(p * 2, .3, 'sine', .03, .03); },
+      ding: () => { T(880, 1.2, 'sine', .18); T(1760, .8, 'sine', .05); T(698, 1.4, 'sine', .16, .45); T(1396, .9, 'sine', .04, .45); },
+      sticker: () => [784, 988, 1175, 1568].forEach((x, i) => T(x, .16, 'square', .035, i * .07)),
+      heart: () => [0, .22, .9, 1.12].forEach((d, i) => T(i % 2 ? 62 : 72, .14, 'sine', .35, d, 42)), beep: () => [0, .18, .36].forEach(d => T(1600, .09, 'square', .04, d)),
+      aah: () => T(240, .6, 'triangle', .06, 0, 210), rip: () => this.nz(.35, .12, 0, 4000, 1500), page: () => this.nz(.22, .07, 0, 1800, 4000),
+      pop: () => T(900, .08, 'sine', .14, 0, 180), float: () => T(523, .5, 'sine', .06, 0, 1046), squish: () => T(180, .5, 'triangle', .07, 0, 320),
+      drip: () => { T(1200, .12, 'sine', .1, 0, 500); T(900, .12, 'sine', .08, .18, 400); }, inhale: () => this.nz(3.8, .03, 0, 300, 1200, true),
+      blow: () => this.nz(3, .07, 0, 1400, 400), puff: () => { this.nz(.25, .1, 0, 2500, 600); T(392, .3, 'sine', .04, .05, 196); },
+      chime: () => { T(1318, .4, 'triangle', .1); T(1760, .5, 'triangle', .08, .12); }, boop: () => T(520, .12, 'sine', .1, 0, 700), sent: () => { T(660, .1, 'sine', .08); T(990, .18, 'sine', .08, .1); }
+    };
+    try { (S[n] || (() => {}))(); } catch (e) {}
+  }
+  startBlowSound() { if (this.state.mute) return; const a = this.ac(); if (!a) return; const src = a.createBufferSource(); src.buffer = this.noiseBuf(a); const fl = a.createBiquadFilter(); fl.type = 'lowpass'; fl.frequency.value = 700; const g = a.createGain(); g.gain.setValueAtTime(0.0001, a.currentTime); g.gain.exponentialRampToValueAtTime(0.06, a.currentTime + 0.3); src.connect(fl); fl.connect(g); g.connect(a.destination); src.start(); this._blow = { src, g }; }
+  stopBlowSound() { const b = this._blow, a = this._ac; if (!b || !a) return; try { b.g.gain.cancelScheduledValues(a.currentTime); b.g.gain.setValueAtTime(Math.max(0.0001, b.g.gain.value), a.currentTime); b.g.gain.exponentialRampToValueAtTime(0.0001, a.currentTime + 0.25); b.src.stop(a.currentTime + 0.3); } catch (e) {} this._blow = null; }
+  startCandles() { const run = (this._cr || 0) + 1; this._cr = run; this.setState({ lit: 5 }); this.candleIn(run); }
+  candleIn(run) { if (this._cr !== run || this.state.screen !== 'candles') return; this.setState({ phase: 'in', ph0: Date.now() }); this.sfx('inhale'); this.speak("Breathe in slowly, like you're smelling a flower."); this.later(() => this.candleOut(run), 4000); }
+  candleOut(run) { if (this._cr !== run || this.state.screen !== 'candles' || this.state.phase !== 'in') return; this.setState({ phase: 'out', ph0: Date.now() }); this.sfx('blow'); this.speak('Now blow out the candle, nice and slow.'); this.later(() => { if (this._cr !== run || this.state.phase !== 'out') return; const lit = this.state.lit - 1; this.sfx('puff'); if (lit <= 0) { this.setState({ lit: 0, phase: 'done' }); this.later(() => this.sfx('win'), 300); this.speak('You blew out all the candles, Mia! Great breathing.'); return; } this.setState({ lit, phase: 'rest' }); this.later(() => this.candleIn(run), 1300); }, 3500); }
+  stopCandles() { this._cr = (this._cr || 0) + 1; this.setState({ phase: 'idle', lit: 5 }); try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch (e) {} }
+  startBub() { const run = (this._br || 0) + 1; this._br = run; this.setState({ bRound: 0 }); this.bubIn(run); }
+  bubIn(run) { if (this._br !== run || this.state.screen !== 'bubbles') return; this.setState({ bph: 'in', ph0: Date.now() }); this.sfx('inhale'); this.speak('Breathe in slowly.'); this.later(() => this.bubOut(run), 3200); }
+  bubOut(run) { if (this._br !== run || this.state.bph !== 'in') return; this.setState({ bph: 'out', ph0: Date.now() }); this.sfx('blow'); this.speak('Now blow out slowly, and watch the bubbles!'); for (let k = 0; k < 6; k++) this.later(() => { if (this._br === run) this.spawnBub(); }, 300 + k * 550);
+    this.later(() => { if (this._br !== run || this.state.bph !== 'out') return; const n = this.state.bRound + 1; if (n >= 4) { this.setState({ bRound: n, bph: 'done' }); this.later(() => this.sfx('win'), 200); this.speak('Great blowing, Mia! Now you can pop the bubbles.'); return; } this.setState({ bRound: n, bph: 'rest' }); this.later(() => this.bubIn(run), 1500); }, 3800); }
+  spawnBub() { const id = Date.now() + Math.random(); const size = 60 + Math.round(Math.random() * 80); this.setState(x => ({ floats: [...x.floats.slice(-14), { id, s: size, up: false, popped: false, dx: Math.round(Math.random() * 380 - 190) }] })); this.later(() => this.setState(x => ({ floats: x.floats.map(b => b.id === id ? { ...b, up: true } : b) })), 40); this.later(() => this.setState(x => ({ floats: x.floats.filter(b => b.id !== id) })), 7200); }
+  stopBub() { this._br = (this._br || 0) + 1; this.setState({ bph: 'idle', bRound: 0 }); try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch (e) {} }
+  startCloud() { const run = (this._clr || 0) + 1; this._clr = run; this.cloudScene(run, 0); }
+  cloudLines() { return [['cloud', "Get comfy. You can close your eyes if you want. Let's float up on a soft, fluffy cloud."], ['sun', 'The sun feels warm on your face. Breathe in slowly, and breathe out.'], ['waves', 'We float over the ocean. Listen to the waves. Swish, swish.'], ['tree', 'Now we land in a quiet park. The grass feels soft and cool.'], ['heart', 'Think of someone who loves you. Send them a big hug in your mind.'], ['home', 'Our cloud floats back down. Wiggle your fingers and toes. Welcome back, Mia!']]; }
+  cloudScene(run, i) { if (this._clr !== run || this.state.screen !== 'cloud') return; const SC = this.cloudLines(); if (i >= SC.length) { this.setState({ cph: 'done' }); this.sfx('win'); return; } this.setState({ cph: 'run', cScene: i }); this.sfx('float'); this.speak(SC[i][1]); this.later(() => this.cloudScene(run, i + 1), 9000); }
+  stopCloud() { this._clr = (this._clr || 0) + 1; this.setState({ cph: 'idle', cScene: 0 }); try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch (e) {} }
+  startBelly() { const run = (this._yr || 0) + 1; this._yr = run; this.setState({ yRound: 0 }); this.bellyIn(run); }
+  bellyIn(run) { if (this._yr !== run || this.state.screen !== 'belly') return; const nm = ['Pip', 'Bo', 'Kiki', 'Dot'][this.state.buddy]; this.setState({ yph: 'in', ph0: Date.now() }); this.sfx('inhale'); this.speak('Breathe in. ' + nm + ' goes up.'); this.later(() => this.bellyOut(run), 4000); }
+  bellyOut(run) { if (this._yr !== run || this.state.yph !== 'in') return; const nm = ['Pip', 'Bo', 'Kiki', 'Dot'][this.state.buddy]; const n = this.state.yRound + 1; this.setState({ yph: 'out', ph0: Date.now(), yRound: n }); this.speak('Breathe out. ' + nm + ' floats down.'); this.later(() => { if (this._yr !== run || this.state.yph !== 'out') return; if (n >= 5) { this.setState({ yph: 'done' }); this.sfx('win'); this.speak('Super belly breathing, Mia! Your body feels calm.'); } else this.bellyIn(run); }, 5000); }
+  stopBelly() { this._yr = (this._yr || 0) + 1; this.setState({ yph: 'idle', yRound: 0 }); try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch (e) {} }
+  spawnPop() { const id = Date.now() + Math.random(); const sz = 70 + Math.round(Math.random() * 70); const dur = Math.round((8 + Math.random() * 3) * 10) / 10; this.setState(x => ({ pops: [...(x.pops || []).slice(-10), { id, s: sz, x: 8 + Math.round(Math.random() * 84), dur, up: false, popped: false }] })); this.later(() => this.setState(x => ({ pops: (x.pops || []).map(b => b.id === id ? { ...b, up: true } : b) })), 50); this.later(() => this.setState(x => ({ pops: (x.pops || []).filter(b => b.id !== id) })), dur * 1000 + 600); }
+  popOne(id) { const b = (this.state.pops || []).find(z => z.id === id); if (!b || b.popped) return; const n = (this.state.popped2 || 0) + 1; if (!this.state.mute) this.tone([523, 587, 659, 784, 880][n % 5], .14, 'sine', .14, 0, 260); this.setState(x => ({ popped2: n, pops: (x.pops || []).map(z => z.id === id ? { ...z, popped: true } : z) })); if (n === 15) { this.later(() => this.sfx('win'), 200); this.speak('You popped 15 bubbles, Mia! Great job.'); } }
+  startSq() { const run = (this._qr || 0) + 1; this._qr = run; this.setState({ qRound: 0 }); this.sqTight(run); }
+  sqTight(run) { if (this._qr !== run || this.state.screen !== 'squeeze') return; this.setState({ qph: 'tight', ph0: Date.now() }); this.sfx('squish'); this.speak('Make two fists, and squeeze tight! Squeeze, squeeze, squeeze.'); this.later(() => this.sqGo(run), 4000); }
+  sqGo(run) { if (this._qr !== run || this.state.qph !== 'tight') return; const n = this.state.qRound + 1; this.setState({ qph: 'go', ph0: Date.now(), qRound: n }); this.sfx('drip'); this.speak('Now let go. Let your hands go soft and floppy, like a noodle.');
+    this.later(() => { if (this._qr !== run || this.state.qph !== 'go') return; if (n >= 3) { this.setState({ qph: 'done' }); this.sfx('win'); this.speak('Great job, Mia! Your hands feel soft and calm now.'); } else this.sqTight(run); }, 4500); }
+  stopSq() { this._qr = (this._qr || 0) + 1; this.setState({ qph: 'idle', qRound: 0 }); try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch (e) {} }
+  bubDown(e) { if (this.state.holdBub) return; this.setState({ holdBub: Date.now(), bubMsg: '' }); this.startBlowSound(); }
+  bubUp() { const st = this.state.holdBub; if (!st) return; const el = Date.now() - st; this.stopBlowSound(); const ok = el > 600; const size = Math.round(70 + Math.min(1, el / 5000) * 250); const id = Date.now(); const msg = el > 3500 ? 'Giant bubble! That was a slow breath.' : el > 1800 ? 'Nice! Try an even slower breath.' : 'Blow slower to make it bigger.';
+    this.setState(x => ({ holdBub: null, blown: x.blown + (ok ? 1 : 0), bubMsg: msg, floats: ok ? [...x.floats.slice(-5), { id, s: size, up: false, popped: false, dx: Math.round(Math.random() * 120 - 60) }] : x.floats }));
+    if (ok) { this.sfx('float'); this.later(() => this.setState(x => ({ floats: x.floats.map(b => b.id === id ? { ...b, up: true } : b) })), 40); this.later(() => this.setState(x => ({ floats: x.floats.filter(b => b.id !== id) })), 6200); } }
+  sqDown(e) { if (this.state.sqHold || this.state.juice >= 3) return; this.setState({ sqHold: Date.now(), sqMsg: '' }); this.sfx('squish'); this.speak('Squeeze, squeeze, squeeze!'); }
+  sqUp() { const st = this.state.sqHold; if (!st) return; const el = Date.now() - st; if (el < 1500) { this.setState({ sqHold: null, sqMsg: 'Squeeze a little longer!' }); this.speak('Squeeze a little longer!'); return; } const j = this.state.juice + 1; this.setState({ sqHold: null, juice: j, sqMsg: j >= 3 ? 'Lemonade!' : 'Let go. Floppy like a noodle.' }); this.sfx('drip'); this.speak(j >= 3 ? 'Lemonade! Now let your whole body go floppy, like a noodle.' : 'Let go. Floppy like a noodle.'); if (j >= 3) this.later(() => this.sfx('win'), 500); }
+  kill() { this._dead = true; (this.timers || []).forEach(clearTimeout); this.timers = []; clearInterval(this.bobT); clearInterval(this.autoT); clearInterval(this.popT); clearTimeout(this._spT); clearTimeout(this._spEnd); try { this.stopBlowSound(); } catch (e) {} }
+  alive() { return !this._dead && (!window.__wpInst || window.__wpInst === this); }
+  markSoon() { const s = this.state; if (s.step >= 5 || s.soonStep === s.step) return; this.setState({ soonStep: s.step, soonToast: true }); this.sfx('chime'); this.later(() => this.setState({ soonToast: false }), 5000); }
+  voiceList() { try { const vs = (window.speechSynthesis && window.speechSynthesis.getVoices()) || []; const bad = /Albert|Bad News|Bahh|Bells|Boing|Bubbles|Cellos|Good News|Jester|Organ|Superstar|Trinoids|Whisper|Wobble|Zarvox|Fred|Junior|Ralph|Kathy|Princess|Grandpa|Grandma|Rocko|Shelley|Sandy|Eddy|Flo|Reed/i; const sc = v => (/Natural|Neural/i.test(v.name) ? 100 : 0) + (/Premium/i.test(v.name) ? 90 : 0) + (/Enhanced/i.test(v.name) ? 80 : 0) + (/Google/i.test(v.name) ? 60 : 0) + (/Ava|Zoe|Allison|Samantha|Susan|Aria|Jenny|Sonia|Libby|Karen|Tessa|Moira|Serena/i.test(v.name) ? 30 : 0) + (/en[-_]US/i.test(v.lang) ? 5 : 0); return vs.filter(v => /^en/i.test(v.lang) && !bad.test(v.name)).sort((a, b) => sc(b) - sc(a)); } catch (e) { return []; } }
+  go(s) { this.setState(x => ({ screen: s, hist: [...x.hist, x.screen] })); }
+  advanceStep() { const s = this.state; if (s.step >= 5) return; this.setState({ step: s.step + 1, celebrate: true, pop: false, autoLeft: 40, coach: false, screen: s.screen === 'hello' ? 'home' : s.screen }); this.sfx('ding'); this.later(() => this.sfx('sticker'), 1300); this.later(() => this.setState({ pop: true }), 60); }
+  svg(p, c, w) { return 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="' + c + '" stroke-width="' + w + '" stroke-linecap="round" stroke-linejoin="round">' + p + '</svg>'); }
+  tapCard(i) {
+    const s = this.state; if (s.flip.length >= 2 || s.flip.includes(i) || s.matched.includes(i)) return;
+    const flip = [...s.flip, i]; this.sfx('flip'); this.setState({ flip });
+    if (flip.length === 2) { const [a, b] = flip; if (s.cards[a] === s.cards[b]) this.later(() => { this.sfx(s.matched.length >= 6 ? 'win' : 'match'); this.setState(x => ({ matched: [...x.matched, a, b], flip: [] })); }, 400); else this.later(() => { this.sfx('nope'); this.setState({ flip: [] }); }, 900); }
+  }
+  startBreath() { this.setState({ phase: 'in' }); this.later(() => this.setState(s => s.phase === 'in' ? { phase: 'blow' } : null), 3500); }
+  blow() { const s = this.state; if (s.phase !== 'blow') return; const lit = s.lit - 1; if (lit <= 0) { this.setState({ lit: 0, phase: 'done' }); return; } this.setState({ lit, phase: 'out' }); this.later(() => this.startBreath(), 1100); }
+  pt(e) { const c = this.canvasRef.current, r = c.getBoundingClientRect(); return { x: (e.clientX - r.left) * c.width / r.width, y: (e.clientY - r.top) * c.height / r.height }; }
+  pDown(e) { const c = this.canvasRef.current; if (!c) return; this.drawing = true; const ctx = c.getContext('2d'); const p = this.pt(e); const b = [[6, '#0a0a0a'], [18, '#0a0a0a'], [34, '#ffffff']][this.state.brush]; ctx.lineWidth = b[0]; ctx.strokeStyle = b[1]; ctx.lineCap = 'round'; ctx.lineJoin = 'round'; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(p.x + .1, p.y + .1); ctx.stroke(); }
+  pMove(e) { if (!this.drawing) return; const ctx = this.canvasRef.current.getContext('2d'); const p = this.pt(e); ctx.lineTo(p.x, p.y); ctx.stroke(); }
+  pUp() { this.drawing = false; }
+
+  renderVals() {
+    const s = this.state, older = s.band === 1;
+    const B = [['Pip', '50%', '#fff', '#0a0a0a'], ['Bo', '34px', '#0a0a0a', '#fff'], ['Kiki', '50% 50% 42% 42%', '#e5e5e5', '#0a0a0a'], ['Dot', '48px 48px 16px 16px', '#fff', '#0a0a0a']];
+    const bd = B[s.buddy];
+    const buddy = { shape: bd[1], bg: bd[2], eye: bd[3] };
+    const buddies = B.map(([name, shape, bg, eye], i) => ({ name, shape, bg, eye, pill: s.buddy === i ? '#0a0a0a' : 'transparent', pillFg: s.buddy === i ? '#fff' : '#0a0a0a', tf: s.buddy === i ? 'translateY(-10px) scale(1.06)' : 'scale(.94)', onPick: () => { this.setState({ buddy: i }); if (this.state.pic) this.speak("Hi Mia! I'm " + name + ". I'm your buddy today!"); } }));
+    const IC = {
+      door: '<rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="14.5" cy="12.5" r=".9"/>',
+      heart: '<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>',
+      chair: '<path d="M7 3v10h10V3"/><path d="M5 13h14v3H5z"/><path d="M7 16v5M17 16v5"/>',
+      doc: '<path d="M6 3v6a4 4 0 0 0 8 0V3"/><path d="M10 13v3a4 4 0 0 0 8 0v-2"/><circle cx="18" cy="12" r="2"/>',
+      test: '<path d="M9 3h6"/><path d="M10 3v13a2 2 0 0 0 4 0V3"/><path d="M10 10h4"/>',
+      home: '<path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/>'
+    };
+    const keys = ['door', 'heart', 'chair', 'doc', 'test', 'home'];
+    const L = older
+      ? [['Check-in', 'You and your grown-up gave your name at the front desk.', 'Done! That was the easy part.'], ['Triage nurse', 'A nurse checked your temperature and asked how you feel. This helps decide who goes next.', 'The most urgent people go first, not whoever came first.'], ['Waiting room', 'This is often the longest part. The doctors are helping other people right now.', "Waiting doesn't mean anyone forgot you."], ['Doctor exam', 'A doctor asks questions and might listen to your heart or look in your ears.', 'You can ask: "What are you checking?"'], ['Tests, maybe', 'Sometimes the doctor wants a closer look. Not everyone needs this.', 'You can ask: "What will happen?"'], ['Going home', 'The doctor explains what they found. Most kids go home with a plan.', 'You can ask: "What happens now?"']]
+      : [['Front door', 'You came in with your grown-up.', 'Yay, you did it!'], ['Nurse check', 'A nurse said hi and checked how you feel.', 'That part is all done!'], ['Waiting spot', 'Now we wait. You can play or rest.', 'The doctors are helping other kids too.'], ['Doctor says hi', 'A doctor will ask how you feel. They might listen to your tummy.', "It's OK to ask questions!"], ['Maybe a test', 'Some kids need a quick test. A grown-up stays with you.', 'You can squeeze a hand.'], ['Home time!', 'The doctor tells your grown-up the plan, and you go home.', 'You were so brave.']];
+    const speechBy = older
+      ? ["Hi Mia! You've checked in.", 'The nurse is checking how you feel.', 'Now we wait. The path moves when the doctor is ready.', "You're with the doctor. You can ask questions.", 'Test time. You can ask for something to hold.', 'All done! Time to hear the plan.']
+      : ['Hi Mia! We made it inside.', 'The nurse is checking on you.', "Now we wait for the doctor. Let's play!", 'The doctor is here to help you.', 'Time for a quick test. Your grown-up stays with you.', 'Home time! You were so brave.'];
+    const P = [[8, 63], [25, 44], [42, 63], [59, 44], [76, 63], [92, 44]];
+    const stones = L.map(([label], i) => {
+      const done = i < s.step, now = i === s.step, next = i === s.step + 1, fut = i > s.step;
+      return { label: now ? (s.pic ? '' : s.soonStep === s.step && i < 5 ? 'Almost your turn!' : ['Coming in', 'With the nurse', 'Waiting for the doctor', 'With the doctor', 'Test time', 'All done!'][i]) : label, showLabel: !s.pic || now, dots: now && i < 5, now, done, next, x: P[i][0], y: P[i][1], sz: now ? 92 : 62, isz: now ? 40 : 28, icon: this.svg(IC[keys[i]], done ? '#fff' : '#0a0a0a', 2.2), bg: done ? '#0a0a0a' : '#fff', bd: now ? '6px solid #0a0a0a' : '4px solid #0a0a0a', sh: now ? '0 7px 0 #0a0a0a' : 'none', pill: now ? '#0a0a0a' : 'transparent', pillFg: now ? '#fff' : done ? '#8c8c8c' : '#0a0a0a', fy: fut ? (s.bob ? -4 : 4) * (i % 2 ? 1 : -1) : 0, sc: now && s.hop ? 1.18 : 1, onTap: () => this.setState(x => ({ stone: i, screen: 'stone', hist: [...x.hist, x.screen] })) };
+    });
+    const seg = (a, b) => ' C ' + (a[0] + 8.5) + ' ' + a[1] + ', ' + (b[0] - 8.5) + ' ' + b[1] + ', ' + b[0] + ' ' + b[1];
+    let fullPath = 'M ' + P[0][0] + ' ' + P[0][1], donePath = fullPath;
+    for (let i = 1; i < 6; i++) { fullPath += seg(P[i - 1], P[i]); if (i <= s.step) donePath += seg(P[i - 1], P[i]); }
+    const pathSvg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="' + fullPath + '" fill="none" stroke="#c4c4c4" stroke-width="6" stroke-dasharray="2 14" stroke-linecap="round" vector-effect="non-scaling-stroke"/>' + (s.step > 0 ? '<path d="' + donePath + '" fill="none" stroke="#0a0a0a" stroke-width="6" stroke-linecap="round" vector-effect="non-scaling-stroke"/>' : '') + '</svg>';
+    const badges = L.map((x, i) => ({ bg: i < s.step ? '#0a0a0a' : '#fff', bd: i < s.step ? '#0a0a0a' : '#d4d4d4', style: i < s.step ? 'solid' : 'dashed', star: i < s.step ? '★' : '', rot: [-10, 6, -4, 12, -8, 5][i] }));
+    const si = s.stone ?? s.step;
+    const stone = { label: L[si][0], tag: si < s.step ? 'You did this one!' : si === s.step ? "You're here now" : 'Coming up', line: si > s.step ? (older ? "You'll find out more when you get there. Not every step happens for everyone." : "We'll find out together when we get there!") : L[si][1], ask: si > s.step ? (older ? 'You can ask your grown-up anything.' : 'Your grown-up will be right with you.') : L[si][2], icon: this.svg(IC[keys[si]], '#0a0a0a', 2) };
+    const A = {
+      memory: '<rect x="3" y="5" width="9" height="13" rx="2" transform="rotate(-8 7.5 11.5)"/><rect x="12" y="5" width="9" height="13" rx="2" transform="rotate(8 16.5 11.5)"/>',
+      spy: '<circle cx="10" cy="10" r="6"/><path d="m14.5 14.5 6 6"/>',
+      draw: '<path d="M3 17c3-6 5 2 8-4s5 2 7-3"/><path d="m16 4 4 4-9 9-5 1 1-5z"/>',
+      stars: '<path d="m7 3 1.4 3 3.1.4-2.3 2.1.6 3.1L7 10l-2.8 1.6.6-3.1L2.5 6.4l3.1-.4z"/><path d="m17 11 1.4 3 3.1.4-2.3 2.1.6 3.1L17 18l-2.8 1.6.6-3.1-2.3-2.1 3.1-.4z"/>',
+      candle: '<rect x="9" y="10" width="6" height="11" rx="1"/><path d="M12 3c2 2 2 4 0 5-2-1-2-3 0-5z"/>',
+      bubble: '<circle cx="9" cy="10" r="5"/><circle cx="17" cy="16" r="3.5"/><circle cx="17" cy="5" r="2"/>',
+      hand: '<path d="M7 11V5.5a1.5 1.5 0 0 1 3 0V10"/><path d="M10 9V4a1.5 1.5 0 0 1 3 0v5"/><path d="M13 9V5a1.5 1.5 0 0 1 3 0v6"/><path d="M16 10.5a1.5 1.5 0 0 1 3 0V14a7 7 0 0 1-7 7h-1a6 6 0 0 1-5-3l-2-4a1.5 1.5 0 0 1 2.6-1.5L7 14"/>'
+    };
+    const games = [
+      { title: 'Find the pairs', sub: 'Match two cards', art: this.svg(A.memory, '#0a0a0a', 1.6), bg: '#fff', fg: '#0a0a0a', rot: -1.2, onTap: () => this.setState(x => ({ screen: 'memory', cards: this.deal(), flip: [], matched: [], hist: [...x.hist, x.screen] })) },
+      { title: 'I spy', sub: 'Find things in the room', art: this.svg(A.spy, '#fff', 1.6), bg: '#0a0a0a', fg: '#fff', rot: 1, onTap: () => this.setState(x => ({ screen: 'ispy', spyFound: 0, spy: Math.floor(Math.random() * 6), hist: [...x.hist, x.screen] })) },
+      { title: 'Draw', sub: 'Use your finger', art: this.svg(A.draw, '#fff', 1.6), bg: '#0a0a0a', fg: '#fff', rot: 0.8, onTap: () => this.go('draw') },
+      { title: 'Light the stars', sub: 'Tap to make them shine', art: this.svg(A.stars, '#0a0a0a', 1.6), bg: '#fff', fg: '#0a0a0a', rot: -0.8, onTap: () => this.setState(x => ({ screen: 'count', counted: [], skyN: (x.skyN || 0) + 1, hist: [...x.hist, x.screen] })) }
+    ];
+    const calms = [
+      { title: 'Candles', sub: older ? '5 slow breaths' : 'Blow them out one by one', art: this.svg(A.candle, '#0a0a0a', 1.4), bg: '#fff', fg: '#0a0a0a', rot: -1, onTap: () => this.setState(x => ({ screen: 'candles', lit: 5, phase: 'idle', hist: [...x.hist, x.screen] })) },
+      { title: 'Bubble pop', sub: 'Tap to pop, nice and slow', art: this.svg(A.bubble, '#fff', 1.4), bg: '#0a0a0a', fg: '#fff', rot: 0.8, onTap: () => this.setState(x => ({ screen: 'bubbles', popped: [], floats: [], blown: 0, bubMsg: '', holdBub: null, bph: 'idle', bRound: 0, pops: [], popped2: 0, hist: [...x.hist, x.screen] })) },
+      { title: 'Squeeze', sub: older ? 'Squeeze, then relax' : 'Squeeze your hands', art: this.svg(A.hand, '#0a0a0a', 1.4), bg: '#fff', fg: '#0a0a0a', rot: -0.6, onTap: () => this.setState(x => ({ screen: 'squeeze', sq: 0, juice: 0, sqMsg: '', sqHold: null, qph: 'idle', qRound: 0, hist: [...x.hist, x.screen] })) }
+    ];
+    const NP = { cloud: '<path d="M7 18a4 4 0 0 1-.5-8A5.5 5.5 0 0 1 17 8.5a4.5 4.5 0 0 1 .5 9.5z"/>', eye: '<path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="2.8"/>', belly: '<circle cx="12" cy="8" r="4"/><path d="M3 20c2-4 5-5 9-5s7 1 9 5"/>', star: '<path d="m12 3.5 2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.8z"/>', ear: '<path d="M7 10a5 5 0 0 1 10 0c0 3-3 4-3 7a3 3 0 0 1-6 0"/><path d="M10 10a2 2 0 0 1 4 0"/>', flower: '<circle cx="12" cy="9" r="2"/><circle cx="12" cy="5" r="2"/><circle cx="15.5" cy="9" r="2"/><circle cx="8.5" cy="9" r="2"/><circle cx="12" cy="12.5" r="2"/><path d="M12 14.5V21"/>', sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>', waves: '<path d="M2 9c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M2 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/>', tree: '<path d="M12 21v-6"/><path d="M12 3a6 6 0 0 1 6 6c0 3-2.7 6-6 6s-6-3-6-6a6 6 0 0 1 6-6z"/>' };
+    calms.push(
+      { title: 'Cloud ride', sub: 'A calm story trip', art: this.svg(NP.cloud, '#fff', 1.4), bg: '#0a0a0a', fg: '#fff', rot: 0.6, onTap: () => this.setState(x => ({ screen: 'cloud', cph: 'idle', cScene: 0, hist: [...x.hist, x.screen] })) },
+      { title: '5 senses', sub: 'Notice things around you', art: this.svg(NP.eye, '#0a0a0a', 1.4), bg: '#fff', fg: '#0a0a0a', rot: -0.8, onTap: () => this.setState(x => ({ screen: 'senses', sRound: 0, sCount: 0, hist: [...x.hist, x.screen] })) },
+      { title: 'Belly breathing', sub: B[s.buddy][0] + ' rides your tummy', art: this.svg(NP.belly, '#fff', 1.4), bg: '#0a0a0a', fg: '#fff', rot: 1, onTap: () => this.setState(x => ({ screen: 'belly', yph: 'idle', yRound: 0, hist: [...x.hist, x.screen] })) }
+    );
+    const cards = s.cards.map((face, i) => { const up = s.flip.includes(i) || s.matched.includes(i); return { face: up ? face : '', bg: up ? '#fff' : '#0a0a0a', pat: up ? 'none' : 'radial-gradient(#444 2px, transparent 2.5px)', op: s.matched.includes(i) ? 0.45 : 1, tf: up ? 'rotate(0deg) scale(1.03)' : 'rotate(0deg)', onTap: () => this.tapCard(i) }; });
+    const BP = [[8, 14, 96], [28, 50, 124], [46, 10, 84], [62, 46, 112], [80, 16, 98], [14, 62, 88], [40, 68, 72], [72, 70, 104], [88, 52, 64]];
+    const bubbles = BP.map(([x, y, sz], i) => { const p = s.popped.includes(i); return { x, y, s: sz, op: p ? 0 : 1, sc: p ? 1.6 : 1, onTap: () => { if (!p) this.setState(q => ({ popped: [...q.popped, i] })); } }; });
+    const SP = [[10, 20, 64, -10], [30, 60, 84, 8], [52, 18, 56, 14], [70, 52, 92, -6], [86, 22, 60, 20], [20, 74, 52, 4], [48, 74, 70, -14], [82, 74, 50, 10], [62, 30, 46, 0]];
+    const stars = SP.map(([x, y, sz, r], i) => { const c = s.counted.includes(i); return { x, y, s: sz, r, c: c ? '#0a0a0a' : '#d4d4d4', sc: c ? 1.15 : 1, onTap: () => { if (!c) this.setState(q => ({ counted: [...q.counted, i] })); } }; });
+    const SQ = [['Squeeze!', 'Make tight fists, like squeezing a lemon', 'Now let go', '30px', '#0a0a0a', 130], ['Let go', 'Open your hands. Soft and floppy.', 'Again!', '50%', '#fff', 170], ['Squeeze!', 'One more time, really tight', 'Let go', '30px', '#0a0a0a', 130], ['Floppy hands', 'Shake them out. How do they feel?', 'Start over', '50%', '#fff', 170]];
+    const q = SQ[s.sq % 4];
+    const spyList = ['something round', 'something blue', 'something with letters', 'something soft', 'something that lights up', 'something with wheels'];
+    const N = {
+      hello: ['Pick a buddy', ['A buddy travels the journey with the child and does the talking.', 'Big tap targets, no reading needed for ages 4–7.']],
+      homePic: ['Pictures + sound', ['For kids who can\'t read yet, or can\'t or don\'t want to talk.', 'Words are hidden. Every screen reads itself aloud when it opens, and each tile has a speaker to hear its name first.', 'Five picture tiles: How I feel, Tell my grown-up, Get ready, Play, Calm.', 'Set by the grown-up when they scan the wristband, or in "Grown-ups".']],
+      feel: ['How I feel', ['Five faces instead of a chat. Tap one and the buddy answers out loud.', 'Each answer offers one or two big next steps. "It hurts" tells the grown-up automatically.']],
+      tell: ['Tell my grown-up', ['A picture board for kids who can\'t say it: tap a card and the tablet says it out loud and sends it to the grown-up\'s phone.', 'The same idea speech therapists use with picture boards. Useful for non-verbal kids, kids too upset to talk, and kids who don\'t speak English.']],
+      home: ['My hospital journey', ['Navigation: Back goes to the last screen, Home goes to the path, and tapping the buddy opens Talk. Each button does one thing.', '"Almost your turn!" appears when the nurse marks it on her side (or 12 s before an auto-move). No clock, no promise.', 'Future stops stay general. Needle prep is off until a grown-up turns it on.', 'Decluttered: one header line, no decorations, no badges on stones, plain labels except the current step, and four slim same-colour tiles.', 'From interviews: kids thought games moved the path, and read grey stones as locked.', 'Now the path moves only when the hospital moves the child. The buddy waits on the current stone with animated dots, never a countdown.', 'The next stone shows the helper who will call you. When it happens: a bell, "Ding! Time to move!", and the buddy hops.', '"How it moves" explains it in three pictures and reads itself aloud. It opens the first time automatically.', 'Future stones are full-contrast and gently floating, so they read as "coming up", not locked.']],
+      stone: ['One step, explained', ['What happens, who you meet, and one thing you are allowed to do.', 'Illustrations to be made with a child life specialist.']],
+      play: ['Play', ['Active distraction works better than passive watching.', 'Every game is fine to stop when your name is called.', 'Soft sound effects on every game, with an off switch for quiet rooms.', 'Every game works one-handed, with the tablet in a lap or held standing.', 'Every game has a clear end: Play again, Something else, or My path.', 'Each game opens with a one-line "how to play" card. Tap ♪ to hear it.', 'Speech only follows a tap: ♪, speaker buttons, faces, picture cards, or Start on a calm game. Both views read each new screen aloud when a tap opens it.']],
+      memory: ['Find the pairs', ['Short and stoppable.']], ispy: ['I spy', ['Uses the room itself, so kids look up from the screen.']],
+      draw: ['Draw', ['Real finger painting. Three brushes, including an eraser.']], count: ['Light up the stars', ['Five star pictures (star, house, heart, fish, rocket), flipped and shifted each round, so it never starts the same way. Lines appear as you light both ends, so the picture grows.', 'From testing: tapping stars did nothing to the sky. Now each tap lights a star, twinkles, and draws a line to the last one, so kids build their own constellation.']],
+      buddy: ['Dress up your buddy', ['Each brave sticker unlocks an outfit, so finishing a step feels like a win.', 'Locked items say exactly what they need. No points, no shop.']],
+      ready: ['Get ready', ['Preparation through play: what will happen, before it happens.', 'Three things only, so the menu stays simple.']],
+      doctor: ['Doctor play', ['Medical play is a child-life technique: kids use real tools on a toy to make them familiar.', 'One tap per tool, and the buddy reacts. No wrong answers.']],
+      story: ['Story time', ["A five-page story of the buddy's own visit, matching the real steps.", 'Big text, read-aloud, and only "Back" and "Next".']],
+      myplan: ['My poke plan', ['The plan the child made with the buddy, ready to show the nurse.', 'Shared with the grown-up\'s phone.']],
+      talk: ['Talk to your buddy', ['Scripted, not generative: every line written with child life specialists. Kids tap big answers, or talk and the tablet matches it to a topic.', 'Needle fear: honest explanation, then a "poke plan" of coping choices (lap, look away, squeeze a hand, numbing cream) the child shows the nurse.', 'Pain, feeling sick or still scared go to the grown-up\'s phone. The buddy never gives medical advice.']],
+      cloud: ['Cloud ride', ['Guided imagery: a calm, voice-led trip in the mind. Child life specialists use it for worry and pain around procedures.', 'Six short scenes, about a minute. No tapping after Start.']],
+      senses: ['5 senses', ['Grounding from CBT: noticing what you can see, touch and hear pulls attention away from worry.', 'Taste is swapped for "1 thing you love", since some kids cannot eat or drink before tests.']],
+      belly: ['Belly breathing', ['Slow belly breathing is the core of most kids\' calming programs. The buddy on the tummy gives kids something to watch rise and fall.', 'Five slow breaths, voice-paced.']],
+      brave: ['Brave words', ['Coping self-talk from CBT: kids pick their own brave sentences and say them out loud with the buddy.']],
+      calm: ['Calm', ['Breathing and body tools dressed up as play.']], candles: ['Candles', ['From testing: "breathe in, then tap to blow" was unnatural. Now it runs on its own: the circle grows while you breathe in, shrinks while you blow, and a flame flickers out.', 'No taps mid-exercise, so it works in a lap or standing. Voice cues mean kids can close their eyes.']],
+      bubbles: ['Bubble pop', ['From testing: Bubbles felt the same as Candles. Now it is a slow, calm pop game: bubbles drift up from random spots and each pop plays a soft note.', 'Breathing lives in Candles and Belly breathing.']], squeeze: ['Squeeze', ['From testing: pressing a lemon on screen didn\'t feel calming. Now it\'s guided: the hands squeeze while the voice counts 3, 2, 1, then they let go.', 'Kids squeeze their own hands or toes. No touching the screen during the exercise.']]
+    };
+    const n = (s.pic && s.screen === 'home') ? N.homePic : (N[s.screen] || N.home);
+    const BN = B[s.buddy][0];
+    const ACCS = [['None', null], ['Cap', { top: '-20%', w: '72%', h: '26%', r: '60% 60% 10% 10%', clip: 'none', rot: '-6deg' }], ['Bow', { top: '-16%', w: '58%', h: '28%', r: '0', clip: 'polygon(0 0,50% 38%,100% 0,100% 100%,50% 62%,0 100%)', rot: '-10deg' }], ['Shades', { top: '24%', w: '82%', h: '22%', r: '8px 8px 40% 40%', clip: 'none', rot: '0deg' }], ['Crown', { top: '-30%', w: '64%', h: '32%', r: '0', clip: 'polygon(0 100%,0 18%,25% 58%,50% 0,75% 58%,100% 18%,100% 100%)', rot: '0deg' }]];
+    const ac = ACCS[s.acc][1];
+    const acc = ac ? { show: true, ...ac, bg: (s.acc === 3 && bd[2] === '#0a0a0a') ? '#fff' : '#0a0a0a' } : { show: false, top: '0', w: '0', h: '0', r: '0', clip: 'none', rot: '0deg', bg: '#0a0a0a' };
+    const accOpts = ACCS.map(([label], i) => { const ok = s.step >= i, sel = s.acc === i; return { label, sub: !ok ? 'Needs ' + i + ' sticker' + (i > 1 ? 's' : '') : sel ? 'Wearing it!' : 'Tap to wear', bg: sel ? '#0a0a0a' : '#fff', fg: sel ? '#fff' : '#0a0a0a', op: ok ? 1 : 0.4, onTap: () => { if (ok) this.setState({ acc: i }); } }; });
+    const T2 = { steth: IC.doc, therm: '<path d="M14 14.8V5a2 2 0 0 0-4 0v9.8a4 4 0 1 0 4 0z"/><path d="M12 9v7"/>', light: '<path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z"/>', band: '<rect x="3" y="8" width="18" height="8" rx="4" transform="rotate(-30 12 12)"/><path d="M10.5 11.5h.01M13.5 12.5h.01M12 10.5h.01M12 13.5h.01"/>', book: '<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5"/><path d="M8 7h7"/>', plan: '<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="m12 9 1.2 2.4 2.6.4-1.9 1.8.5 2.6-2.4-1.3-2.4 1.3.5-2.6-1.9-1.8 2.6-.4z"/>' };
+    const TOOLS = [['Stethoscope', T2.steth, "Boom-boom! That's my heart. It tickles a little!"], ['Thermometer', T2.therm, 'Beep! Not too hot, not too cold. Just right.'], ['Little light', T2.light, 'Say aaah! The light helps see inside my mouth.'], ['Bandage', T2.band, 'A bandage for my arm. All better!']];
+    const tools = TOOLS.map(([label, p], i) => { const sel = s.docTool === i; return { label, icon: this.svg(p, sel ? '#fff' : '#0a0a0a', 1.8), bg: sel ? '#0a0a0a' : '#fff', fg: sel ? '#fff' : '#0a0a0a', done: s.docUsed.includes(i), onTap: () => { this.sfx(['heart', 'beep', 'aah', 'rip'][i]); this.setState(x => ({ docTool: i, docUsed: x.docUsed.includes(i) ? x.docUsed : [...x.docUsed, i] })); } }; });
+    const SPg = [[BN + ' felt sick, so ' + BN + ' came to the hospital with a grown-up.', 'door'], ['A nurse said hi and checked ' + BN + "'s temperature. Beep!", 'heart'], [BN + ' waited in the waiting spot and played games. Waiting is OK.', 'chair'], ['The doctor listened to ' + BN + "'s heart. Boom-boom! It tickled.", 'doc'], [BN + ' felt brave, got a sticker, and went home with a plan.', 'home']];
+    const pg = Math.min(s.page, 4);
+    const story = { title: BN + "'s trip to the hospital · " + (pg + 1) + ' of 5', text: SPg[pg][0], icon: this.svg(IC[SPg[pg][1]], '#0a0a0a', 2), prevOp: pg === 0 ? 0.3 : 1, nextLabel: pg === 4 ? 'The end!' : 'Next', dots: SPg.map((x, i) => ({ w: i === pg ? 34 : 12, bg: i <= pg ? '#0a0a0a' : '#d4d4d4' })), onPrev: () => { this.sfx('page'); this.setState(x => ({ page: Math.max(0, x.page - 1) })); }, onNext: () => { this.sfx('page'); if (this.state.page >= 4) this.setState(x => { const h = [...x.hist]; const p2 = h.pop() || 'home'; return { screen: p2, hist: h, page: 0 }; }); else this.setState(x => ({ page: x.page + 1 })); } };
+    const makePlan = () => { const fresh = !this.state.msgs.length; this.setState(x => ({ screen: 'talk', hist: [...x.hist, x.screen] })); if (fresh) this.goNode('needle2'); else this.pick("Let's make my poke plan", 'needle2'); };
+    const readyTiles = [
+      { title: 'Doctor play', sub: 'Be the doctor for ' + BN, art: this.svg(T2.steth, '#0a0a0a', 1.4), bg: '#fff', fg: '#0a0a0a', rot: -1, onTap: () => this.setState(x => ({ screen: 'doctor', docUsed: [], docTool: null, hist: [...x.hist, x.screen] })) },
+      { title: 'Story time', sub: BN + "'s hospital trip", art: this.svg(T2.book, '#fff', 1.4), bg: '#0a0a0a', fg: '#fff', rot: 0.8, onTap: () => this.setState(x => ({ screen: 'story', page: 0, hist: [...x.hist, x.screen] })) },
+      { title: 'My poke plan', sub: s.plan.length ? s.plan.length + ' superpowers picked' : 'Make one with ' + BN, art: this.svg(T2.plan, '#0a0a0a', 1.4), bg: '#fff', fg: '#0a0a0a', rot: -0.6, onTap: () => { if (this.state.plan.length) this.go('myplan'); else makePlan(); } }
+    ];
+    const braveTile = { title: 'Brave words', sub: 'Make a brave card', art: this.svg('<path d="m12 3.5 2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.8z"/>', '#0a0a0a', 1.4), bg: '#fff', fg: '#0a0a0a', rot: -0.6, onTap: () => this.setState(x => ({ screen: 'brave', hist: [...x.hist, x.screen] })) };
+    const homeTiles = [
+      { title: 'Get ready', sub: 'Doctor play, stories', art: this.svg(T2.steth, '#fff', 1.6), bg: '#0a0a0a', fg: '#fff', sh: '#525252', onTap: () => this.go('ready') },
+      { title: 'Play', sub: '4 games', art: this.svg(A.memory, '#0a0a0a', 1.6), bg: '#fff', fg: '#0a0a0a', sh: '#0a0a0a', onTap: () => this.go('play') },
+      { title: 'Calm', sub: 'Feel a bit better', art: this.svg(A.bubble, '#fff', 1.6), bg: '#0a0a0a', fg: '#fff', sh: '#525252', onTap: () => this.go('calm') }
+    ];
+    const kids2 = { acc, accOpts, tools, docLine: s.docTool === null ? 'You be the doctor! Pick a tool and check me.' : TOOLS[s.docTool][2], docAll: s.docUsed.length === 4, docBandage: s.docUsed.includes(3), docHasTool: s.docTool !== null, docToolIcon: s.docTool !== null ? this.svg(TOOLS[s.docTool][1], '#0a0a0a', 1.8) : '', story, readyTiles: [...readyTiles.slice(0, 2), braveTile, ...(s.pokeOn ? [readyTiles[2]] : [])], readyCols: s.pokeOn ? 4 : 3, homeTiles, makePlan, practiceCandles: () => this.setState(x => ({ screen: 'candles', lit: 5, phase: 'idle', hist: [...x.hist, x.screen] })), goBuddy: () => this.go('buddy'), stickerWord: s.step + ' sticker' + (s.step === 1 ? '' : 's') };
+    const planL = ["On my grown-up's lap", 'Look away', 'Watch it happen', 'Squeeze a hand', 'Blow bubbles', 'Count to 10', 'Magic numbing cream', 'Watch a video'];
+    const nd = s.node ? this.nodes()[s.node] : null;
+    const talk = {
+      thread: s.msgs.map(m => ({ text: m.text || '', isPip: m.from === 'pip', isKid: m.from === 'kid', isSys: m.from === 'sys', isCard: m.from === 'card' })),
+      typing: s.typing, opts: nd && nd.opts ? nd.opts.map(([label, key]) => ({ label, onTap: () => this.pick(label, key) })) : [],
+      showOpts: !!(nd && nd.opts) && !s.typing, showPlan: !!(nd && nd.plan) && !s.typing,
+      planOpts: planL.map(label => { const sel = s.plan.includes(label); return { label, bg: sel ? '#0a0a0a' : '#fff', fg: sel ? '#fff' : '#0a0a0a', onTap: () => this.setState(x => ({ plan: sel ? x.plan.filter(z => z !== label) : [...x.plan, label] })) }; }),
+      planOp: s.plan.length ? 1 : 0.35, planDone: () => { if (this.state.plan.length) this.pick("That's my plan!", 'planDone'); },
+      planTitle: "Mia's poke plan", planChosen: s.plan, buddyName: B[s.buddy][0],
+      micBg: s.listening ? '#0a0a0a' : '#fff', micIcon: this.svg('<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3"/>', s.listening ? '#fff' : '#0a0a0a', 2),
+      micLabel: s.listening ? 'Listening…' : 'Tap to talk', mouthListening: s.listening, mouthSmile: !s.listening, threadRef: this.threadRef,
+      micTap: () => { if (this.state.listening) return; this.setState({ listening: true }); this.later(() => { if (this.state.screen !== 'talk') { this.setState({ listening: false }); return; } this.setState({ listening: false }); this.pick("I'm scared of the needle", 'needle'); }, 1700); },
+      openTalk: () => { const fresh = !this.state.msgs.length; this.setState(x => ({ screen: 'talk', hist: x.screen === 'talk' ? x.hist : [...x.hist, x.screen] })); if (fresh) this.goNode('start'); },
+      restartTalk: () => { this.timers.forEach(clearTimeout); this.timers = []; this.setState({ msgs: [], node: null, plan: [], typing: false, listening: false, seenNodes: [] }); this.later(() => this.goNode('start'), 50); }
+    };
+    const BELL = '<path d="M6 16.5V11a6 6 0 1 1 12 0v5.5l1.5 1.5h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/>';
+    const WL = ['Coming in', 'With the nurse', 'Waiting for the doctor', 'With the doctor', 'Test time', 'All done!'];
+    const SUBS = older ? ['', 'The triage nurse is ready for you.', 'Triage is done. Now we wait for the doctor.', 'The doctor is ready to see you.', 'Time for a quick test.', 'All done. Time to hear the plan.'] : ['', 'The nurse is ready for you!', 'All done with the nurse! Now we wait.', 'The doctor is ready for you!', 'Time for a quick test.', 'You did it! Time to go home.'];
+    const CAP = older ? ['This is where you are', 'Ding! The nurse or doctor is ready', 'Your path moves to the next step'] : ['This is you!', 'Ding! The doctor is ready', 'We hop to the next spot'];
+    const journeyX = {
+      waitLabel: WL[s.step], waiting: s.step < 5, dots: [0, 1, 2].map(i => ({ y: (s.tick || 0) % 3 === i ? -5 : 0 })),
+      bellRot: s.bob ? -16 : 16, speakSc: s.bob ? 1.08 : 1, hopY: s.bob ? -10 : 0,
+      coach: s.coach, cap1: CAP[0], cap2: CAP[1], cap3: CAP[2], coachTitle: 'Your hospital path', coachSay: older ? "Hi Mia, I'm " + BN + ", your buddy. This is your hospital path. It shows where you are in your visit. When the nurse or doctor is ready, you'll hear a ding, and your path moves to the next step on its own. Games are just for fun while you wait." : "Hi Mia! I'm " + BN + ", your buddy. This is your hospital path. I show you where you are. When the doctor is ready, you'll hear a ding, and we'll hop to the next spot. You don't have to do anything. Just play while we wait!",
+      gameNote: older ? "Games are just for fun. They don't move your path." : 'Play games while you wait. They are just for fun!',
+      icChair: this.svg(IC.chair, '#0a0a0a', 2.2), icDoc: this.svg(IC.doc, '#0a0a0a', 2.2), icBell: this.svg(BELL, '#0a0a0a', 2.2), icGame: this.svg(A.memory, '#fff', 1.8),
+      arrive: { title: s.step === 5 ? 'Home time!' : 'Time to move!', sub: SUBS[s.step], label: L[s.step][0], icon: this.svg(IC[keys[s.step]], '#0a0a0a', 2), sticker: '+1 sticker' + (s.step > 0 && s.step <= 4 ? ' · New for ' + BN + ': ' + ACCS[s.step][0] : '') },
+      openCoach: () => this.setState({ coach: true }), closeCoach: () => this.setState({ coach: false, coachSeen: true }),
+      seePath: () => { this.setState({ celebrate: false, screen: 'home', stone: null, hist: [], hop: true }); this.later(() => this.setState({ hop: false }), 700); },
+      keepPlaying: () => this.setState({ celebrate: false }),
+      toggleAuto: () => this.setState(x => ({ auto: !x.auto, autoLeft: 40 })),
+      autoLabel: s.auto ? (s.step >= 5 ? 'Auto-move: done' : 'Auto-move on · next in ' + s.autoLeft + 's') : 'Auto-move: off', autoBg: s.auto ? '#f0f0f0' : '#fff'
+    };
+    const nowT = Date.now(), ph = s.phase;
+    const BRM = {
+      idle: { size: 90, tr: 'width .5s ease, height .5s ease', text: 'Ready?', sub: 'Watch the circle and breathe with it.', count: '', bg: '#fff', fg: '#0a0a0a', btn: 'Start' },
+      in: { size: 190, tr: 'width 4s ease-in-out, height 4s ease-in-out', text: 'Breathe in…', sub: 'Smell the birthday cake', count: String(Math.min(4, Math.floor((nowT - (s.ph0 || nowT)) / 1000) + 1)), bg: '#f2f2f2', fg: '#0a0a0a', btn: 'Stop' },
+      out: { size: 90, tr: 'width 3.5s ease-in-out, height 3.5s ease-in-out', text: 'Blow…', sub: 'Slowly blow out the candle', count: '', bg: '#0a0a0a', fg: '#fff', btn: 'Stop' },
+      rest: { size: 90, tr: 'width .4s, height .4s', text: 'Nice!', sub: s.lit + (s.lit === 1 ? ' candle' : ' candles') + ' left', count: '', bg: '#fff', fg: '#0a0a0a', btn: 'Stop' },
+      done: { size: 120, tr: 'width .6s, height .6s', text: 'All out! Great breathing!', sub: 'How does your body feel now?', count: '★', bg: '#0a0a0a', fg: '#fff', btn: 'Again' }
+    };
+    const br = { ...(BRM[ph] || BRM.idle) }; const stopB = br.btn === 'Stop';
+    br.btnBg = stopB ? '#fff' : '#0a0a0a'; br.btnFg = stopB ? '#0a0a0a' : '#fff'; br.onBtn = () => { if (stopB) this.stopCandles(); else this.startCandles(); };
+    const holding = !!s.holdBub, sqh = !!s.sqHold, sqEl = sqh ? nowT - s.sqHold : 0;
+    const linePts = s.counted.map(i => SP[i][0] + ',' + SP[i][1]).join(' ');
+    const BUBM = { idle: ['Bubbles', 'Breathe in with me. Then blow!', 1, 'transform .4s', 'Start'], in: ['Breathe in…', 'Smell a flower', 1.25, 'transform 3s ease-in-out', 'Stop'], out: ['Blow…', 'Slowly. Tap a bubble to pop it!', 0.9, 'transform 3.5s ease-in-out', 'Stop'], rest: ['Nice!', 'Pop the bubbles!', 1, 'transform .5s', 'Stop'], done: ['Great blowing!', 'Pop all the bubbles!', 1, 'transform .5s', 'Again'] };
+    const bm = BUBM[s.bph] || BUBM.idle;
+    const bub = { text: bm[0], sub: bm[1], ring: bm[2], rtr: bm[3], btn: bm[4], btnBg: bm[4] === 'Stop' ? '#fff' : '#0a0a0a', btnFg: bm[4] === 'Stop' ? '#0a0a0a' : '#fff', dots: [0, 1, 2, 3].map(i => ({ bg: i < s.bRound ? '#0a0a0a' : '#fff' })), onBtn: () => { if (bm[4] === 'Stop') this.stopBub(); else this.startBub(); } };
+    const FIST = '<path d="M6.5 11V9a1.6 1.6 0 0 1 3.2 0v1.5"/><path d="M9.7 10V8.2a1.6 1.6 0 0 1 3.2 0V10"/><path d="M12.9 10V8.6a1.6 1.6 0 0 1 3.2 0V11"/><path d="M16.1 10.8a1.6 1.6 0 0 1 3.2 0V14a7 7 0 0 1-7 7h-.8A6 6 0 0 1 5.5 15v-1.6a2.2 2.2 0 0 1 2.2-2.2H11a1.6 1.6 0 0 1 0 3.2H9"/>';
+    const qEl = nowT - (s.ph0 || nowT);
+    const HM = { idle: ['Squeeze your hands', 'I will tell you when to squeeze and when to let go.', 'Start'], tight: ['Squeeze tight!', 'Squeeze your toes too… ' + Math.max(1, 3 - Math.floor(qEl / 1300)), 'Stop'], go: ['Let go!', 'Floppy, like a noodle', 'Stop'], done: ['Soft and calm', 'Great job! How do your hands feel?', 'Again'] };
+    const hm = HM[s.qph] || HM.idle, tight = s.qph === 'tight';
+    const hands = { text: hm[0], sub: hm[1], btn: hm[2], btnBg: hm[2] === 'Stop' ? '#fff' : '#0a0a0a', btnFg: hm[2] === 'Stop' ? '#0a0a0a' : '#fff', img: this.svg(tight ? FIST : A.hand, '#0a0a0a', 1.5), rot: tight ? ((s.tick || 0) % 2 ? -4 : 4) : (s.qph === 'go' ? (s.bob ? -9 : 9) : 0), sc: tight ? 0.9 : (s.qph === 'go' ? 1.06 : 1), tr: tight ? 'transform .2s' : 'transform .9s ease-in-out', dots: [0, 1, 2].map(i => ({ bg: i < s.qRound ? '#0a0a0a' : '#fff' })), onBtn: () => { if (hm[2] === 'Stop') this.stopSq(); else this.startSq(); } };
+    const HOWS = { memory: ['Find the pairs', 'Tap two cards to turn them over. If the pictures match, you found a pair!', A.memory, true], ispy: ['I spy', 'I will name something in the room. Look around, and tap "Found it!" when you see it.', A.spy, false], draw: ['Draw', 'Use your finger to draw anything you like. A rainbow, your pet, your house!', A.draw, true], count: ['Light the stars', 'Tap each star to make it shine. Watch your star picture grow!', A.stars, true], candles: ['Candles', 'Watch the circle. When it grows, breathe in. When it gets small, blow out the candle.', A.candle, false], bubbles: ['Bubble pop', 'Bubbles float up slowly. Tap them to pop! Take your time.', A.bubble, true], squeeze: ['Squeeze', 'I will tell you when to squeeze your hands tight, and when to let them go floppy.', A.hand, false], cloud: ['Cloud ride', 'Get comfy and listen. I will take you on a calm trip in your mind. You can close your eyes!', NP.cloud, false], senses: ['5 senses', 'I will ask you to notice things around you. Tap "Found one!" each time you find one.', NP.eye, true], belly: ['Belly breathing', 'Put your hand on your tummy. Breathe in and I float up. Breathe out and I float down.', NP.belly, false], brave: ['Brave words', 'Pick up to three brave words for your brave card. Then we can say them together!', NP.star, true] };
+    const hw = HOWS[s.screen]; const howOn = !!hw && !(s.seenHow || []).includes(s.screen) && !s.celebrate && !s.coach;
+    this._howOn = howOn; this._howText = hw ? hw[0] + '. ' + hw[1] : '';
+    const how = { onHear: () => this.speak(this._howText), show: howOn, title: hw ? hw[0] : '', line: hw ? hw[1] : '', art: hw ? this.svg(hw[2], '#0a0a0a', 1.4) : '', hand: hw ? hw[3] : false, onGo: () => { this.sfx('boop'); this.setState(x => ({ seenHow: [...(x.seenHow || []), x.screen] })); } };
+    const SHAPES = [
+      { name: 'a star', pts: [[50, 14], [73, 40], [64, 80], [36, 80], [27, 40]], order: [0, 2, 4, 1, 3, 0] },
+      { name: 'a house', pts: [[32, 82], [32, 46], [50, 16], [68, 46], [68, 82]], order: [0, 1, 2, 3, 4, 0] },
+      { name: 'a heart', pts: [[50, 84], [30, 62], [25, 38], [37, 22], [50, 34], [63, 22], [75, 38], [70, 62]], order: [0, 1, 2, 3, 4, 5, 6, 7, 0] },
+      { name: 'a fish', pts: [[18, 50], [34, 28], [56, 28], [72, 50], [56, 72], [34, 72], [86, 30], [86, 70]], order: [0, 1, 2, 3, 6, 7, 3, 4, 5, 0] },
+      { name: 'a rocket', pts: [[50, 10], [61, 30], [61, 64], [71, 84], [57, 74], [43, 74], [29, 84], [39, 64], [39, 30]], order: [0, 1, 2, 3, 4, 5, 6, 7, 8, 0] }
+    ];
+    const skN = s.skyN || 0, shp = SHAPES[skN % SHAPES.length], rnd = k => { const v = Math.sin(skN * 91.7 + k * 12.9) * 43758.5; return v - Math.floor(v); };
+    const skFlip = rnd(99) > 0.5, skDx = Math.round(rnd(98) * 16 - 8);
+    const SKY = { name: shp.name, order: shp.order, pts: shp.pts.map(([x, y], i) => [Math.max(8, Math.min(92, (skFlip ? 100 - x : x) + skDx + (rnd(i) * 4 - 2))), Math.max(10, Math.min(88, y + (rnd(i + 20) * 4 - 2))), 54 + Math.round(rnd(i + 40) * 26), Math.round(rnd(i + 60) * 40 - 20)]) };
+    const skLit = new Set(s.counted), skSegs = [], skDone = s.counted.length === SKY.pts.length;
+    for (let k = 0; k < SKY.order.length - 1; k++) { const a = SKY.order[k], b = SKY.order[k + 1]; if (skLit.has(a) && skLit.has(b)) skSegs.push('M' + SKY.pts[a][0] + ' ' + SKY.pts[a][1] + 'L' + SKY.pts[b][0] + ' ' + SKY.pts[b][1]); }
+    const FIN = { memory: [s.matched.length === 8, 'You found all the pairs!', () => this.setState({ cards: this.deal(), flip: [], matched: [] }), 'play'], count: [skDone, 'You made ' + SKY.name + '!', () => this.setState(x => ({ counted: [], skyN: (x.skyN || 0) + 1 })), 'play'], ispy: [(s.spyFound || 0) >= 5, 'You found 5 things!', () => this.setState({ spyFound: 0 }), 'play'], candles: [s.phase === 'done', 'You blew out all the candles!', () => this.startCandles(), 'calm'], bubbles: [(s.popped2 || 0) >= 15, 'You popped 15 bubbles!', () => this.setState({ pops: [], popped2: 0 }), 'calm'], squeeze: [s.qph === 'done', 'Your hands feel calm!', () => this.startSq(), 'calm'], cloud: [s.cph === 'done', 'What a calm trip!', () => this.startCloud(), 'calm'], senses: [s.sRound >= 5, 'You noticed so much!', () => this.setState({ sRound: 0, sCount: 0 }), 'calm'], belly: [s.yph === 'done', 'Super belly breathing!', () => this.startBelly(), 'calm'] };
+    const fnn = FIN[s.screen];
+    const fin = { show: !!fnn && fnn[0] && !s.celebrate && !s.coach, title: fnn ? fnn[1] : '', again: () => { this.sfx('boop'); if (fnn) fnn[2](); }, other: () => { if (fnn) this.setState({ screen: fnn[3], hist: ['home'] }); } };
+    const SENSES = [[5, NP.eye, 'Find 5 things you can see.'], [4, A.hand, 'Now find 4 things you can touch.'], [3, NP.ear, 'Listen. Find 3 things you can hear.'], [2, NP.flower, 'Can you find 2 things you can smell?'], [1, IC.heart, 'Last one! Think of 1 thing you love.']];
+    const CLS = this.cloudLines(), clOn = s.cph === 'run', clDone = s.cph === 'done';
+    const cl = { icon: this.svg(clOn ? (NP[CLS[s.cScene][0]] || IC[CLS[s.cScene][0]]) : clDone ? IC.home : NP.cloud, '#0a0a0a', 1.4), text: clOn ? CLS[s.cScene][1] : clDone ? 'Welcome back, Mia!' : "Get comfy. When you're ready, tap Start and listen.", dots: CLS.map((x, i) => ({ bg: clDone || (clOn && i <= s.cScene) ? '#0a0a0a' : '#fff' })), btn: clOn ? 'Stop' : clDone ? 'Again' : 'Start', btnBg: clOn ? '#fff' : '#0a0a0a', btnFg: clOn ? '#0a0a0a' : '#fff', onBtn: () => { if (this.state.cph === 'run') this.stopCloud(); else this.startCloud(); } };
+    const sdone = s.sRound >= 5, sr = SENSES[Math.min(4, s.sRound)];
+    const sn = { going: !sdone, icon: this.svg(sdone ? IC.heart : sr[1], '#0a0a0a', 1.6), text: sdone ? 'You noticed so much!' : sr[2], dots: sdone ? [] : Array.from({ length: sr[0] }, (_, i) => ({ bg: i < s.sCount ? '#0a0a0a' : '#fff' })), rounds: SENSES.map((x, i) => ({ bg: i < s.sRound ? '#0a0a0a' : '#d4d4d4' })),
+      onFound: () => { const st = this.state; if (st.sRound >= 5) return; const need = SENSES[st.sRound][0]; const c = st.sCount + 1; this.sfx('twinkle', c); if (c >= need) { const nr = st.sRound + 1; this.setState({ sRound: nr, sCount: 0 }); this.later(() => this.speak(nr >= 5 ? 'You noticed so much, Mia! Great job.' : 'Great! ' + SENSES[nr][2]), 350); } else this.setState({ sCount: c }); } };
+    const YB = { idle: [116, 1, 'transform .5s, bottom .5s', 'Belly breathing', 'Put your hand on your tummy, then tap Start.', 'Start'], in: [158, 1.35, 'bottom 4s ease-in-out, transform 4s ease-in-out', 'Breathe in…', 'Your tummy gets big, like a balloon', 'Stop'], out: [116, 1, 'bottom 5s ease-in-out, transform 5s ease-in-out', 'Breathe out…', 'Your tummy goes flat again', 'Stop'], done: [116, 1, 'transform .5s, bottom .5s', 'Super belly breathing!', 'How does your body feel now?', 'Again'] };
+    const yb = YB[s.yph] || YB.idle;
+    const by = { y: yb[0], belly: yb[1], tr: yb[2], text: yb[3], sub: yb[4], btn: yb[5], btnBg: yb[5] === 'Stop' ? '#fff' : '#0a0a0a', btnFg: yb[5] === 'Stop' ? '#0a0a0a' : '#fff', dots: [0, 1, 2, 3, 4].map(i => ({ bg: i < s.yRound ? '#0a0a0a' : '#fff' })), onBtn: () => { if (yb[5] === 'Stop') this.stopBelly(); else this.startBelly(); } };
+    const BW = ['I can do hard things', 'My grown-up is right here', "It's OK to feel scared", 'This will be over soon', 'I am brave', 'I can take slow breaths'];
+    const bsel = s.braveSel || [];
+    const bw = { words: BW.map(label => { const on2 = bsel.includes(label); return { label, bg: on2 ? '#0a0a0a' : '#fff', fg: on2 ? '#fff' : '#0a0a0a', onTap: () => { const cur = this.state.braveSel || []; if (cur.includes(label)) { this.setState({ braveSel: cur.filter(z => z !== label) }); return; } if (cur.length >= 3) return; this.sfx('chime'); this.setState({ braveSel: [...cur, label] }); this.speak(label); } }; }), chosen: bsel, empty: !bsel.length, op: bsel.length ? 1 : 0.35, onSay: () => { const cur = this.state.braveSel || []; if (!cur.length) return; this.sfx('win'); this.speak("Let's say them together. " + cur.join('. ') + '. You are so brave, Mia!'); } };
+    const VL = this.voiceList();
+    const calmX = { autoShort: s.auto ? 'Auto-advance: On' : 'Auto-advance: Off', sfxShort: s.mute ? 'Sounds: Off' : 'Sounds: On', voiceShort: s.voiceOff ? 'Voice: Off' : 'Voice: On', cl, sn, by, bw, pops: (s.pops || []).map(b => ({ x: b.x, s: b.s, h: b.s / 2, dur: b.dur, ty: b.up ? -900 : 0, op: b.popped ? 0 : 1, onPop: () => this.popOne(b.id) })), popWord: Math.min(15, s.popped2 || 0) + ' of 15', voiceName: VL.length ? VL[(s.voiceIdx || 0) % VL.length].name.replace(/\s*\(.*?\)\s*/g, ' ').trim().slice(0, 28) : 'Default voice', cycleVoice: () => { this._lastTap = Date.now(); this.setState(x => ({ voiceIdx: (x.voiceIdx || 0) + 1 })); this.later(() => { this._lastTap = Date.now(); this.speak("Hi Mia! I'm " + ['Pip', 'Bo', 'Kiki', 'Dot'][this.state.buddy] + '. Is this voice nice?'); }, 60); }, goTell: () => this.setState(x => ({ screen: 'tell', hist: [...x.hist, x.screen] })), icTell: this.svg('<path d="M4 5h16v11H9l-5 4z"/><path d="M9 10.5h.01M12 10.5h.01M15 10.5h.01"/>', '#0a0a0a', 2), barBud: s.screen === 'talk' ? 'none' : 'flex', barBubVis: s.screen === 'talk' ? 'hidden' : 'visible', fin, soonToast: s.soonToast, markSoonTap: () => this.markSoon(), spyCount: Math.min(5, s.spyFound || 0) + ' of 5', icHouse: this.svg(IC.home, '#0a0a0a', 2.2), pokeTbg: s.pokeOn ? '#0a0a0a' : '#d4d4d4', pokeTl: s.pokeOn ? 21 : 3, togglePoke: () => this.setState(x => ({ pokeOn: !x.pokeOn })), bub, hands, how, stickerCount: String(s.step), homeTiles2: homeTiles.map(t => ({ ...t, art2: t.art.split('%23fff%22').join('%230a0a0a%22') })),
+      br, candles2: [0, 1, 2, 3, 4].map(i => { const lt = i < s.lit, cur = ph === 'out' && i === s.lit - 1; return { flame: lt ? '#fff' : 'transparent', fbd: lt ? '#0a0a0a' : '#e0e0e0', rot: cur ? ((s.tick || 0) % 2 ? -14 : 14) : 0, sc: lt ? (cur ? 0.82 : 1) : 0.6 }; }),
+      grow: holding ? { s: 320, tr: 'width 5s linear, height 5s linear', op: 1 } : { s: 70, tr: 'none', op: 0 },
+      floats: s.floats.map(b => ({ s: b.s, h: b.s / 2, ty: b.up ? -820 : 0, dx: b.up ? b.dx : 0, op: b.popped ? 0 : 1, onPop: (e) => { if (e && e.stopPropagation) e.stopPropagation(); if (b.popped) return; this.sfx('pop'); this.setState(x => ({ floats: x.floats.map(z => z.id === b.id ? { ...z, popped: true } : z) })); } })),
+      wandBg: holding ? '#f2f2f2' : '#fff', bubText: holding ? 'Blow out slowly…' : (s.bubMsg || 'Hold the wand and blow out slowly'), bubSub: holding ? 'Keep holding. Slower makes it bigger.' : 'Let go to send it floating',
+      blownWord: s.blown + (s.blown === 1 ? ' bubble' : ' bubbles'), bubDown: e => this.bubDown(e), bubUp: () => this.bubUp(), handOp: holding ? 0 : 1, handY: s.bob ? -6 : 6, icHand: this.svg(A.hand, '#0a0a0a', 1.6),
+      lem: { sx: sqh ? 1.18 : 1, sy: sqh ? 0.72 : 1, tr: sqh ? 'transform .25s ease-out' : 'transform .6s cubic-bezier(.2,1.8,.4,1)', eh: sqh ? 3 : 13 },
+      sqDots: [0, 1, 2].map(i => ({ bg: sqh && sqEl > (i + 1) * 500 ? '#0a0a0a' : '#fff' })),
+      sqText: sqh ? 'Squeeze!' : (s.sqMsg || 'Press and hold the lemon'), sqSub: sqh ? 'Squeeze your tummy and toes too' : (s.juice >= 3 ? 'Your body can rest now' : 'Then let go and go floppy'),
+      cupH: Math.round(s.juice / 3 * 86), juiceWord: s.juice + ' of 3', sqDone: s.juice >= 3, sqAgain: () => this.setState({ juice: 0, sqMsg: '' }), sqDown: e => this.sqDown(e), sqUp: () => this.sqUp(),
+      constImg: 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="' + skSegs.join(' ') + '" fill="none" stroke="#fff" stroke-opacity="' + (skDone ? 1 : 0.7) + '" stroke-width="' + (skDone ? 4 : 3) + '" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/></svg>'),
+      stars2: SKY.pts.map(([x, y, sz, rr], i) => { const c = s.counted.includes(i); return { x, y, s: sz, r: rr, c: c ? '#fff' : '#5c5c5c', glow: c ? '0 0 22px rgba(255,255,255,.9)' : 'none', sc: c ? 1.15 : 1, onTap: () => { if (this.state.counted.includes(i)) return; const n2 = this.state.counted.length; this.sfx('twinkle', n2); this.setState(q2 => ({ counted: [...q2.counted, i] })); if (n2 + 1 === SKY.pts.length) this.later(() => { this.sfx('win'); this.speak('Wow, Mia! You made ' + SKY.name + '!'); }, 300); } }; }),
+      starWord: s.counted.length + ' of ' + SKY.pts.length, skyDots: Array.from({ length: 26 }, (_, i) => ({ x: (i * 37 + 11) % 97, y: (i * 53 + 7) % 93, s: 2 + (i % 3) })),
+      tapSfx: () => { this._lastTap = Date.now(); this.sfx('tap'); }, toggleMute: () => this.setState(x => ({ mute: !x.mute })), muteLabel: s.mute ? 'Off · tap to turn on' : 'On · tap to mute', voiceBg: s.voiceOff ? '#f2f2f2' : '#fff', voiceIcon: this.svg(s.voiceOff ? '<path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16 9.5l5 5M21 9.5l-5 5"/>' : '<path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16 9a3 3 0 0 1 0 6"/><path d="M18.5 6.5a7 7 0 0 1 0 11"/>', '#0a0a0a', 2.2), voiceLabel: s.voiceOff ? 'Off · tap to turn on' : 'On · tap to mute', toggleVoice: () => { if (!this.state.voiceOff) { try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch (e) {} } this.setState(x => ({ voiceOff: !x.voiceOff })); },
+      mouthH: s.talking ? ((s.tick || 0) % 2 ? 12 : 5) : 8
+    };
+    const on = { [s.screen]: true };
+    const speech = { tell: 'Tap a picture to tell your grown-up.', feel: 'How are you feeling, Mia?', home: s.soonStep === s.step ? 'Almost your turn, Mia! Get ready to go.' : speechBy[s.step], stone: stone.label, play: 'What do you want to play, Mia?', calm: "Let's feel calm together.", memory: 'Can you find the matching cards?', ispy: "Let's look around the room!", draw: 'Draw anything you like, Mia!', count: 'Tap the stars to make them shine!', candles: "Let's blow out the candles!", bubbles: "Let's pop some bubbles!", squeeze: "Let's squeeze our hands!", cloud: "Let's go on a calm cloud ride.", senses: "Let's use our 5 senses!", belly: "Let's breathe with our bellies!", brave: 'Pick your brave words!', buddy: 'Do I look good? Tap to dress me up!', ready: "Let's get ready together!", doctor: 'You be the doctor! Pick a tool and check me.', story: "Story time! Let's read about my trip.", myplan: 'Here is your poke plan, Mia!', talk: '' }[s.screen] || '';
+    const FI = {
+      happy: '<circle cx="12" cy="12" r="9"/><circle cx="9" cy="10" r=".8"/><circle cx="15" cy="10" r=".8"/><path d="M8.5 14.5a4 4 0 0 0 7 0"/>',
+      okay: '<circle cx="12" cy="12" r="9"/><circle cx="9" cy="10" r=".8"/><circle cx="15" cy="10" r=".8"/><path d="M9 15.5h6"/>',
+      scared: '<circle cx="12" cy="12" r="9"/><circle cx="9" cy="10" r=".8"/><circle cx="15" cy="10" r=".8"/><path d="M8 16c1-1 1.7.6 2.7-.2S12 16 13 15.3s2 .7 3 0"/>',
+      sad: '<circle cx="12" cy="12" r="9"/><circle cx="9" cy="10" r=".8"/><circle cx="15" cy="10" r=".8"/><path d="M8.5 16.5a4 4 0 0 1 7 0"/>',
+      hurt: '<circle cx="12" cy="12" r="9"/><path d="M8 9.2l2 1.1-2 1.1M16 9.2l-2 1.1 2 1.1"/><path d="M9 16.5a4 4 0 0 1 6 0"/>',
+      tell: '<path d="M4 5h16v11H9l-5 4z"/><path d="M9 10.5h.01M12 10.5h.01M15 10.5h.01"/>',
+      toilet: '<path d="M7 3h5v7H7z"/><path d="M5 10h14a7 7 0 0 1-14 0z"/><path d="M9 17l-1 4h8l-1-4"/>',
+      cup: '<path d="M6 4h12l-1.5 16h-9z"/><path d="M6.5 9h11"/>',
+      apple: '<path d="M12 7c-2-1.5-7-1.5-7 4 0 5 3.5 9 5 9 1 0 1.3-.5 2-.5s1 .5 2 .5c1.5 0 5-4 5-9 0-5.5-5-5.5-7-4z"/><path d="M12 7c0-2 1-3.5 3-4"/>',
+      grown: '<circle cx="8" cy="6" r="2.5"/><circle cx="16.5" cy="9" r="2"/><path d="M4 21v-6a4 4 0 0 1 8 0v6"/><path d="M13 21v-4a3.5 3.5 0 0 1 7 0v4"/>',
+      loud: '<path d="M7 10a5 5 0 0 1 10 0c0 3-3 4-3 7a3 3 0 0 1-6 0"/><path d="M10 10a2 2 0 0 1 4 0"/><path d="M19.5 4.5l-2 2M21 9.5h-2.5"/>',
+      thumb: '<path d="M7 11v9H4v-9z"/><path d="M7 11l4-7a2 2 0 0 1 3 2l-1 4h5a2 2 0 0 1 2 2.3l-1.2 6A2 2 0 0 1 16.8 20H7"/>',
+      speak: '<path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16 9a3 3 0 0 1 0 6"/><path d="M18.5 6.5a7 7 0 0 1 0 11"/>',
+      phone: '<rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/>'
+    };
+    const goTo = (sc, extra) => this.setState(x => ({ screen: sc, hist: [...x.hist, x.screen], ...(extra || {}) }));
+    const FEEL = [['Happy', FI.happy, "Yay! I'm so happy you feel good, Mia. Want to play a game?", [['Play', A.memory, () => goTo('play')]]], ['Okay', FI.okay, 'Thanks for telling me. Waiting can be a little boring. Want to play something?', [['Play', A.memory, () => goTo('play')], ['Draw', A.draw, () => goTo('draw')]]], ['Scared', FI.scared, "It's OK to feel scared, Mia. Lots of kids feel that way at the hospital. Let's take some slow breaths together.", [['Candles', A.candle, () => goTo('candles', { lit: 5, phase: 'idle' })], ['Tell Mom', FI.tell, () => goTo('tell')]]], ['Sad', FI.sad, "I'm sorry you feel sad, Mia. Would a big hug from your grown-up help?", [['Hug', IC.heart, () => { this.sendGrown('Mia wants a hug'); this.speak('I asked your grown-up for a big hug.'); }], ['Draw', A.draw, () => goTo('draw')]]], ['It hurts', FI.hurt, 'Thank you for telling me it hurts, Mia. I told your grown-up, so they can help you.', [['Tell Mom more', FI.tell, () => goTo('tell')]]]];
+    const TELL = [['I feel scared', FI.scared, 'I feel scared.'], ['It hurts', FI.hurt, 'It hurts.'], ['Bathroom', FI.toilet, 'I need the bathroom.'], ['Thirsty', FI.cup, "I'm thirsty."], ['Hungry', FI.apple, "I'm hungry."], ['I want my grown-up', FI.grown, 'I want my grown-up.'], ['Too loud', FI.loud, "It's too loud."], ['I feel OK', FI.thumb, 'I feel OK.']];
+    const PIC_SAY = { hello: "Hi Mia! I'm so glad you're here. Pick a buddy to keep you company today.", stone: stone.label + '. ' + stone.line + ' ' + stone.ask };
+    let speechOut = (s.pic && PIC_SAY[s.screen]) || speech || ({ tell: 'Tap a picture to tell your grown-up.', feel: 'How do you feel? Tap a face.' }[s.screen] || '');
+    if (s.screen === 'feel' && s.feel !== null) speechOut = FEEL[s.feel][2];
+    this._say = s.celebrate ? journeyX.arrive.title + ' ' + journeyX.arrive.sub : s.coach ? journeyX.coachSay : this._howOn ? this._howText : speechOut;
+    const HOME_LONG = older
+      ? ["You've checked in, Mia. Nice start!", 'A nurse is checking how you feel. This helps them decide who needs help first.', "Now we wait for the doctor, Mia. Your path will move when it's your turn. Tap me if you want to talk.", "You're with the doctor now. You can ask them any questions.", "Time for a quick test. You can ask for something to hold.", 'Great job, Mia! You are all done.']
+      : ['We just came into the hospital, Mia. Good job!', "A nurse is checking how you feel. You're doing great, Mia.", "Now we wait for the doctor, Mia. Want to play while we wait? Tap me if you want to talk.", 'The doctor is here to help you, Mia. You can ask them anything.', 'Time for a quick test. Your grown-up will stay right with you.', 'Yay, Mia! Home time. You were so brave today!'];
+    const SAY_LONG = {
+      hello: PIC_SAY.hello, home: HOME_LONG[s.step], stone: PIC_SAY.stone,
+      play: "Let's play a game while we wait, Mia! You can match cards, play I spy, draw a picture, or light up the stars. Tap the one you want.",
+      calm: "If you feel worried, that's OK, Mia. These games help your body feel calm. You can blow out candles, blow bubbles, or squeeze your hands. Tap one to try it.",
+      ready: 'Want to see what happens at the doctor, Mia? You can play doctor with me' + (s.pokeOn ? ', read a story, or make a plan for a poke.' : ' or read a story.') + ' Tap one.',
+      candles: "Let's breathe together, Mia. Slow breaths help your body feel calm. Tap Start, and follow the circle.",
+      bubbles: "Let's pop some bubbles, Mia! They float up nice and slow. Tap them to pop.",
+      squeeze: "When we squeeze our hands and then let go, our body can relax, Mia. Tap Start, and I'll tell you when to squeeze and when to let go.",
+      cloud: "This is a calm story trip, Mia. Get comfy, and tap Start when you're ready. You can close your eyes!",
+      senses: "Let's notice things around us, Mia. " + (s.sRound < 5 ? SENSES[s.sRound][2] : ''),
+      belly: "Let's do belly breathing, Mia. Put your hand on your tummy. Tap Start, and watch me float up and down.",
+      brave: 'Brave words help us feel strong, Mia. Pick up to three brave words for your brave card.',
+      tell: "If you need something, Mia, tap a picture. I'll tell your grown-up for you.",
+      feel: 'How are you feeling right now, Mia? Tap the face that looks like you. Any feeling is OK.',
+      story: "Story time! Let's read about my trip to the hospital. Tap Next to turn the page.",
+      doctor: "You be the doctor, Mia! Pick a tool, and use it to check on me. Don't worry, it won't hurt me!"
+    };
+    if (!s.celebrate && !s.coach && !this._howOn && !(s.screen === 'feel' && s.feel !== null) && SAY_LONG[s.screen]) this._say = SAY_LONG[s.screen];
+    const hear = (t) => (e) => { if (e && e.stopPropagation) e.stopPropagation(); this.speak(t); };
+    const PT = [['Tell my grown-up', FI.tell, '#0a0a0a', '#fff', '#525252', () => goTo('tell')], ['Get ready', T2.steth, '#fff', '#0a0a0a', '#0a0a0a', () => goTo('ready')], ['Play', A.memory, '#0a0a0a', '#fff', '#525252', () => goTo('play')], ['Calm', A.bubble, '#fff', '#0a0a0a', '#0a0a0a', () => goTo('calm')]];
+    const picX = {
+      picMode: s.pic, wordMode: !s.pic,
+      bars: [10, 22, 30, 18, 26, 12, 20].map((h, i) => ({ h: s.talking ? [10, 22, 30, 18, 26, 12, 20][(i + (s.tick || 0)) % 7] : 6 })),
+      bubbleTap: () => this.speak(this._say),
+      icSpeak: this.svg(FI.speak, '#0a0a0a', 2.2), icPhone: this.svg(FI.phone, '#0a0a0a', 2.2),
+      picTiles: PT.map(([name, p, bg, fg, sh, go]) => ({ bg, sh, art: this.svg(p, fg, 1.7), onTap: go, onHear: hear(name) })),
+      goFeel: () => goTo('feel', { feel: null }), hearFeel: hear('How I feel'),
+      faces: FEEL.map(([label, p], i) => { const sel = s.feel === i; return { label, icon: this.svg(p, sel ? '#fff' : '#0a0a0a', 1.6), bg: sel ? '#0a0a0a' : '#fff', tf: sel ? 'translateY(-8px) scale(1.06)' : (s.feel !== null ? 'scale(.92)' : 'none'), onTap: () => { this.sfx('boop'); this.setState({ feel: i }); this.speak(FEEL[i][2]); if (i === 4) this.sendGrown('Mia says it hurts'); } }; }),
+      faceSize: s.pic ? 17 : 22, faceCol: s.pic ? '#8c8c8c' : '#0a0a0a',
+      feelPicked: s.feel !== null && s.screen === 'feel',
+      feelActs: s.feel !== null ? FEEL[s.feel][3].map(([label, p, go], i) => ({ label, icon: this.svg(p, i === 0 ? '#0a0a0a' : '#fff', 1.8), bg: i === 0 ? '#0a0a0a' : '#fff', fg: i === 0 ? '#fff' : '#0a0a0a', onTap: go })) : [],
+      tellCards: TELL.map(([label, p, say], i) => { const sel = s.tellSel === i; return { label, icon: this.svg(p, sel ? '#fff' : '#0a0a0a', 1.6), bg: sel ? '#0a0a0a' : '#fff', fg: sel ? '#fff' : '#0a0a0a', sc: sel ? 1.04 : 1, onTap: () => { this.sfx('chime'); this.setState({ tellSel: i }); this.speak('Thanks for telling me, Mia. I let your grown-up know: ' + say); this.sendGrown('Mia says: ' + say); this.later(() => this.setState(x => (x.tellSel === i ? { tellSel: null } : null)), 1400); } }; }),
+      tellSize: s.pic ? 17 : 22, hasSent: !!s.sent, sentText: s.sent ? s.sent.text : '',
+      modeOpts: [['Read words', false], ['Pictures + sound', true]].map(([label, v]) => ({ label, bg: s.pic === v ? '#0a0a0a' : 'transparent', fg: s.pic === v ? '#fff' : '#0a0a0a', onTap: () => this.setState({ pic: v }) })),
+      modeOpts2: [['Read words', false], ['Pictures + sound', true]].map(([label, v]) => ({ label, bg: s.pic === v ? '#fff' : 'transparent', w: s.pic === v ? '600' : '400', onTap: () => this.setState({ pic: v }) }))
+    };
+    return {
+      on, note: { title: n[0], points: n[1] }, ...journeyX, ...calmX, ...talk, ...kids2, threadRef: this.threadRef, showBar: s.screen !== 'hello', notHome: s.screen !== 'home' && s.screen !== 'hello', buddy, buddies, bobY: s.bob ? -6 : 0, speech: speechOut, ...picX,
+      journeyTitle: older ? 'My visit' : 'My hospital journey', stepWord: 'Step ' + (s.step + 1) + ' of 6', labelSize: older ? 16 : 18,
+      stones, pathImg: 'data:image/svg+xml,' + encodeURIComponent(pathSvg), badges, badgeCount: s.step + ' of 6', stone, games, calms, cards,
+      pairsFound: s.matched.length / 2, memDone: s.matched.length === 8,
+      candles: [0, 1, 2, 3, 4].map(i => ({ flame: i < s.lit ? '#fff' : 'transparent', fbd: i < s.lit ? '#0a0a0a' : '#e0e0e0', sc: i < s.lit ? 1 : 0.6 })),
+      bz: (s.phase === 'in' || s.phase === 'blow') ? 200 : 84, btr: s.phase === 'in' ? 'width 3.5s ease, height 3.5s ease' : 'width .8s ease, height .8s ease',
+      breathCount: (5 - s.lit) + '/5',
+      breathText: { idle: 'Ready?', in: 'Breathe in slowly…', blow: 'Now blow!', out: 'Great!', done: 'All out! Great breathing!' }[s.phase],
+      showStart: s.phase === 'idle' || s.phase === 'done', showBlow: s.phase === 'blow', startLabel: s.phase === 'done' ? 'Again' : 'Start',
+      bubbles, allPopped: s.popped.length === BP.length, stars, starCount: s.counted.length, allStars: s.counted.length === SP.length,
+      sq: { text: q[0], sub: q[1], btn: q[2], r: q[3], bg: q[4], w: q[5] }, spyText: spyList[s.spy],
+      brushes: [[10, '#0a0a0a', 'none'], [24, '#0a0a0a', 'none'], [26, '#fff', '3px dashed #0a0a0a']].map(([dot, dc, dbd], i) => ({ dot, dc, dbd, bg: s.brush === i ? '#f0f0f0' : '#fff', onPick: () => this.setState({ brush: i }) })),
+      canvasRef: this.canvasRef, pDown: e => this.pDown(e), pMove: e => this.pMove(e), pUp: () => this.pUp(),
+      clearCanvas: () => { const c = this.canvasRef.current; if (c) c.getContext('2d').clearRect(0, 0, c.width, c.height); },
+      readBg: s.talking ? '#0a0a0a' : '#fff', readFg: s.talking ? '#fff' : '#0a0a0a', grown: s.grown,
+      celebrate: s.celebrate, popScale: s.pop ? 1 : 0.3, celebrateText: s.step > 0 ? 'You finished: ' + L[s.step - 1][0] + (s.step <= 4 ? '. New for ' + BN + ': ' + ACCS[s.step][0] + '!' : '') : '',
+      bands: ['Ages 4–7', 'Ages 8–12'].map((label, i) => ({ label, bg: s.band === i ? '#fff' : 'transparent', w: s.band === i ? '600' : '400', onPick: () => this.setState({ band: i }) })),
+      start: () => this.setState(x => ({ screen: 'home', hist: [], coach: !x.coachSeen })), goHome: () => this.setState({ screen: 'home', stone: null, hist: [] }),
+      goBack: () => this.setState(x => { const h = [...x.hist]; const p = h.pop() || 'home'; return { screen: p === 'hello' ? 'home' : p, hist: h, stone: null }; }),
+      goPlay: () => this.go('play'), goCalm: () => this.go('calm'),
+      toggleRead: () => this.speak(this._say), openGrown: () => this.setState({ grown: true }), closeGrown: () => this.setState({ grown: false }),
+      memReset: () => this.setState({ cards: this.deal(), flip: [], matched: [] }), resetBubbles: () => this.setState({ popped: [] }), resetStars: () => this.setState({ counted: [] }),
+      sqNext: () => this.setState({ sq: s.sq + 1 }), nextSpy: () => { const nx = (s.spy + 1) % spyList.length, found = (s.spyFound || 0) + 1; this.sfx(found >= 5 ? 'win' : 'chime'); this.setState({ spy: nx, spyFound: found }); this.speak(found >= 5 ? 'You found 5 things! Great looking, Mia.' : 'You found it! Great looking. Now I spy ' + spyList[nx] + '.'); },
+      startBreath: () => { if (s.phase === 'done') this.setState({ lit: 5 }); this.startBreath(); }, blow: () => this.blow(),
+      advance: () => this.advanceStep(),
+      closeCelebrate: () => this.setState({ celebrate: false }),
+      reset: () => { this._said = {}; this.timers.forEach(clearTimeout); this.timers = []; this.setState(this.initial()); }
+    };
+  }
+}
+</script>
+
+
+</body></html>
